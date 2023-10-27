@@ -1,0 +1,50 @@
+
+## main task
+Create an external web application that tracks the top traders in the Aori orderbook by their completed orders. This information can be fetched by aggregating data from the events emitted from the OrderProtocol contract.	
+
+types of pairs that people are trading in general - to see what markets they are coming from.
+
+## important data
+contract address
+https://goerli.etherscan.io/address/0xea2b4e7f02b859305093f9f4778a19d66ca176d5
+
+previous dashboard
+https://dune.com/anticode/aori-volume
+
+data format from arkham
+CSV header - transactionHash,fromAddress,fromLabel,fromIsContract,toAddress,toLabel,toIsContract,tokenAddress,type,blockTimestamp,blockNumber,blockHash,tokenName,tokenSymbol,tokenDecimals,unitValue,tokenId,historicalUSD,chain
+
+### order of actions
+- [ ] quickstart with moralis to refresh
+- [ ] quickstart for fleek app
+- [ ] setup all the pages for the app
+- [ ] setup Dune api for the first data fetch with the 10 users, using the remote JSON query
+list of txs -> get top addresses - that could be from Dune 
+get the data on these top addresses, say top 10 for now
+https://api.dune.com/api/v1/query/3150665/results?api_key=<api_key>
+
+- [ ] display a table with query results - address and usdc value
+- [ ] pie chart to that 
+- [ ] Dune replicated
+- [ ] using the 10 addresses, add a button to go to arkham
+- [ ] add for each address data from Moralis
+- [ ] display the data as another pie chart
+- [ ] persist the data with mongodb
+
+## technology choices
+- nextjs for the backend
+- R for data transformation - looks that not needed
+- mongodb fine as a database of derivative data - already using the queries from Dune, that could be secondary.
+- deployment - could use this https://blog.fleek.co/posts/fleek-nextJS
+-  pie charts - need to decide 
+https://github.com/reactchartjs/react-chartjs-2 - the smallest one tbh
+https://github.com/recharts/recharts - this sounds the easiest with React
+https://github.com/airbnb/visx/ - relatively low use
+https://github.com/apache/echarts - 
+
+target result - like here https://platform.arkhamintelligence.com/explorer/address/0x9db865cAcACdaDF95e376a2FC1a4aA1ed9D70762
+
+## not need
+
+speed not an issue
+do not need portfolio contents
