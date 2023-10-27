@@ -19,17 +19,17 @@ CSV header - transactionHash,fromAddress,fromLabel,fromIsContract,toAddress,toLa
 
 ### order of actions
 - [x] quickstart for fleek app https://blog.fleek.co/posts/fleek-nextJS
-- [ ] quickstart with moralis to refresh 
-- [ ] setup all the pages for the app
-- [ ] setup Dune api for the first data fetch with the 10 users, using the remote JSON query
+- [x] quickstart with moralis to refresh 
+- [x] setup all the pages for the app
+- [x] setup Dune api for the first data fetch with the 10 users, using the remote JSON query
 list of txs -> get top addresses - that could be from Dune 
 get the data on these top addresses, say top 10 for now
 https://api.dune.com/api/v1/query/3150665/results?api_key=<api_key>
 
-- [ ] display a table with query results - address and usdc value
-- [ ] pie chart to that 
+- [x] display a table with query results - address and usdc value
+- [x] pie chart to that 
+- [x] using the 10 addresses, add a button to go to arkham
 - [ ] Dune replicated
-- [ ] using the 10 addresses, add a button to go to arkham
 - [ ] add for each address data from Moralis
 - [ ] display the data as another pie chart
 - [ ] persist the data with mongodb
@@ -58,7 +58,6 @@ https://docs.moralis.io/web3-data-api/evm/reference/get-wallet-nft-transfers?add
 
 moralis quickstart things
 https://docs.moralis.io/web3-data-api/evm/quickstart-nextjs
-https://nextjs.org/learn-pages-router/basics/create-nextjs-app
 https://admin.moralis.io/settings#api_keys
 
 ## not need

@@ -1,0 +1,19 @@
+{
+  "name": "dune_api_js_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "module": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "esm": "^3.2.25",
+    "node-fetch": "^3.3.2"
+  }
+}
