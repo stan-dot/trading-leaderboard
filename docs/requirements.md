@@ -34,6 +34,7 @@ https://api.dune.com/api/v1/query/3150665/results?api_key=<api_key>
 - [ ] display the data as another pie chart
 - [ ] persist the data with mongodb
 
+
 ## technology choices
 - nextjs for the backend
 - R for data transformation - looks that not needed
