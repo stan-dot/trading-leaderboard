@@ -13,7 +13,6 @@
   "author": "fenmund",
   "license": "MIT",
   "dependencies": {
-    "@cowprotocol/ts-dune-client": "^0.0.2",
     "@moralisweb3/next": "^2.23.1",
     "axios": "^1.6.0",
     "moralis": "^2.23.1",

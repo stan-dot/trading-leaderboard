@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Root, Row } from "../types";
 import { getArkhamAddress } from "../utils/getArkhamAddress";
 
@@ -7,7 +8,7 @@ type TableOnContractProps = {
 };
 
 export function TableOnContract({ rows, tableTitle }: TableOnContractProps) {
-  console.log("rows:", rows);
+  // console.log("rows:", rows);
   if (rows.length === 0) {
     return <h2>No table here - {tableTitle}</h2>;
   }
@@ -21,6 +22,7 @@ export function TableOnContract({ rows, tableTitle }: TableOnContractProps) {
             <th>address</th>
             <th>weth</th>
             <th>link to arkham</th>
+            <th>analyze here</th>
           </tr>
         </thead>
         <tbody>
@@ -37,6 +39,9 @@ export function TableOnContract({ rows, tableTitle }: TableOnContractProps) {
                   <a href={getArkhamAddress(r.address)}>
                     see
                   </a>
+                </td>
+                <td>
+                  <Link href={`/traders/${r.address}`}>Inspect</Link>
                 </td>
               </tr>
             );

@@ -1,8 +1,8 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import { TableOnContract } from "../components/TableOnContract";
 import { Root, Row } from "../types";
-import { MyPieChart } from "../components/MyPieChart";
 import { DynamicChart } from "../dynamic/DynamicChart";
+import Head from "next/head";
 
 export const mockRows: Row[] = [
   { address: "0xfd3f35e6dedb01d57200e0217a7893d6dc794208", weth_value: 6736 },
@@ -47,6 +47,10 @@ function HomePage(
 ) {
   return (
     <div>
+      <Head>
+        <title>Leaderboard explorer</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <h1>home page</h1>
       <TableOnContract rows={mockRows} tableTitle="weth data" />
       <br />

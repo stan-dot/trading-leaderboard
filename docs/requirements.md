@@ -29,9 +29,9 @@ https://api.dune.com/api/v1/query/3150665/results?api_key=<api_key>
 - [x] display a table with query results - address and usdc value
 - [x] pie chart to that 
 - [x] using the 10 addresses, add a button to go to arkham
-- [ ] Dune replicated
-- [ ] add for each address data from Moralis
-- [ ] display the data as another pie chart
+- [x] Dune replicated
+- [x] add for each address data from Moralis
+- [ ] display the data as another pie chart - what pairs do compose given trader's portfolio.
 - [ ] persist the data with mongodb
 
 
