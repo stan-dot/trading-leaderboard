@@ -18,8 +18,8 @@ data format from arkham
 CSV header - transactionHash,fromAddress,fromLabel,fromIsContract,toAddress,toLabel,toIsContract,tokenAddress,type,blockTimestamp,blockNumber,blockHash,tokenName,tokenSymbol,tokenDecimals,unitValue,tokenId,historicalUSD,chain
 
 ### order of actions
+- [x] quickstart for fleek app https://blog.fleek.co/posts/fleek-nextJS
 - [ ] quickstart with moralis to refresh 
-- [ ] quickstart for fleek app https://blog.fleek.co/posts/fleek-nextJS
 - [ ] setup all the pages for the app
 - [ ] setup Dune api for the first data fetch with the 10 users, using the remote JSON query
 list of txs -> get top addresses - that could be from Dune 
@@ -62,6 +62,5 @@ https://nextjs.org/learn-pages-router/basics/create-nextjs-app
 https://admin.moralis.io/settings#api_keys
 
 ## not need
-
 speed not an issue
 do not need portfolio contents
