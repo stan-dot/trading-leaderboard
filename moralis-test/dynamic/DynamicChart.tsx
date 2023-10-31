@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 
 export  const DynamicChart = dynamic(
-  () => import("../components/MyPieChart"),
+  () => import("../components/LeaderboardChart"),
   { ssr: false },
 );
 

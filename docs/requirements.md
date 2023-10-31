@@ -14,8 +14,17 @@ https://dune.com/anticode/aori-volume
 my query
 https://dune.com/queries/3150665/5256056?category=canonical&sidebar=version-history
 
+custom label
+https://recharts.org/en-US/examples/PieChartWithCustomizedLabel
+
 data format from arkham
 CSV header - transactionHash,fromAddress,fromLabel,fromIsContract,toAddress,toLabel,toIsContract,tokenAddress,type,blockTimestamp,blockNumber,blockHash,tokenName,tokenSymbol,tokenDecimals,unitValue,tokenId,historicalUSD,chain
+
+ERC-20 transfer event topic0
+0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+
+known txn hash that was usdc for weth
+0xa588aed7ca1fd2d523692a9f89947da083d48fe4da11e9522ea6fd9e6c6e30a2
 
 ### order of actions
 - [x] quickstart for fleek app https://blog.fleek.co/posts/fleek-nextJS
@@ -31,13 +40,20 @@ https://api.dune.com/api/v1/query/3150665/results?api_key=<api_key>
 - [x] using the 10 addresses, add a button to go to arkham
 - [x] Dune replicated
 - [x] add for each address data from Moralis
-- [ ] display the data as another pie chart - what pairs do compose given trader's portfolio.
-- [ ] persist the data with mongodb
 
+#### Structured part
+- [ ] run scripts locally to check out if it works
+- [ ] make this into an api
+  - [ ] listen to the data from transactions
+- [ ] connect inputs to the UI
+- [ ] connect outputs to the UI
+  - [ ] display the data as another pie chart - what pairs do compose given trader's portfolio.
+- [ ] persistence
+  - [ ] persist the data with mongodb
 
 ## technology choices
 - nextjs for the backend
-- R for data transformation - looks that not needed
+- Ramda js for data transformation - looks that not needed
 - mongodb fine as a database of derivative data - already using the queries from Dune, that could be secondary.
 - deployment - could use this https://blog.fleek.co/posts/fleek-nextJS
 -  pie charts - need to decide 
@@ -60,6 +76,13 @@ https://docs.moralis.io/web3-data-api/evm/reference/get-wallet-nft-transfers?add
 moralis quickstart things
 https://docs.moralis.io/web3-data-api/evm/quickstart-nextjs
 https://admin.moralis.io/settings#api_keys
+
+reading in values
+https://web3js.readthedocs.io/en/v1.2.11/web3-eth-abi.html#id14 
+
+## formatting the data
+using web3 get txn receipt
+https://ethereum.stackexchange.com/questions/131448/how-to-decode-from-web3-eth-gettransactionreceipt-logs
 
 ## not need
 speed not an issue

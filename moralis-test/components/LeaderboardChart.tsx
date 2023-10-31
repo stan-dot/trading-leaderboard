@@ -32,7 +32,6 @@ export default function MyPieChart({ rows }: MyPieChartProps) {
           innerRadius={60}
           outerRadius={80}
           fill="#ff00ee"
-          label
         />
         <Tooltip
           content={CustomTooltip}
