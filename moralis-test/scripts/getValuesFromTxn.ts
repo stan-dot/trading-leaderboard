@@ -1,5 +1,5 @@
-const web3 = require("web3").default;
-import Web3 from "web3";
+const Web3 = require("web3").default;
+// import Web3 from "web3";
 const abi = require("../abi.json");
 const receipt = require("./receipt.json");
 // const Moralis = require("moralis").default;
@@ -825,8 +825,10 @@ async function decodeTransaction(txHash) {
 
     // Iterate through logs and decode
     receipt.logs.forEach((log) => {
-      console.log(log)
-      const decodedLog = w.eth.abi.decodeParameters(inputsOnlyAbi, log.data, log.topic0);
+      console.log(log, inputsOnlyAbi)
+      // const decodedLog = w.eth.abi.decodeParameters(inputsOnlyAbi, log.data, log.topic0);
+      // const decodedLog = w.eth.abi.decodeLog(inputsOnlyAbi, log.data);
+      const decodedLog = w.eth.abi.decodeLog(contractAbi, log.data);
 
       // contractAbi.filter(x => x.type === 'event'),
       // log.data,
