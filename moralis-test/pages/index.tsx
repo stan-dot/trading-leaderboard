@@ -1,7 +1,7 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import { TableOnContract } from "../components/TableOnContract";
 import { Root, Row } from "../types";
-import { DynamicChart } from "../dynamic/DynamicChart";
+import { DynamicLeaderboardChart } from "../dynamic/DynamicLeaderboardChart";
 import Head from "next/head";
 
 export const mockRows: Row[] = [
@@ -54,7 +54,7 @@ function HomePage(
       <h1>home page</h1>
       <TableOnContract rows={mockRows} tableTitle="weth data" />
       <br />
-      <DynamicChart rows={mockRows} />
+      <DynamicLeaderboardChart rows={mockRows} />
     </div>
   );
 }

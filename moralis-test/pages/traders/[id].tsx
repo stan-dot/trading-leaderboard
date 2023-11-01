@@ -1,6 +1,6 @@
 import { useEvmWalletTransactionsVerbose } from "@moralisweb3/next";
 import { useRouter } from "next/router";
-import ChartComponent from "../../components/TraderChart";
+import ChartComponent from "../../components/TestLinearChart";
 import { fetchFromMoralis } from "../../utils/fetchFromMoralis";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next/types";
 import { MoralisData } from "../../utils/MoralisData";

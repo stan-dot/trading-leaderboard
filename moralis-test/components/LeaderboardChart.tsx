@@ -1,7 +1,7 @@
 import { Pie, PieChart, Tooltip } from "recharts";
 import { Row } from "../types";
 
-const CustomTooltip = ({ active, payload, label }) => {
+const LeaderboardChartTooltip = ({ active, payload, label }) => {
   console.log("active: ", active, " payload: ", payload, " label: ", label);
   if (active && payload && payload.length) {
     return (
@@ -14,11 +14,11 @@ const CustomTooltip = ({ active, payload, label }) => {
   return null;
 };
 
-type MyPieChartProps = {
+type LeaderboardChartProps = {
   rows: Row[];
 };
 
-export default function MyPieChart({ rows }: MyPieChartProps) {
+export default function LeaderboardChart({ rows }: LeaderboardChartProps) {
   return (
     <div>
       <h2>Pie chart for this contract: </h2>
@@ -34,7 +34,7 @@ export default function MyPieChart({ rows }: MyPieChartProps) {
           fill="#ff00ee"
         />
         <Tooltip
-          content={CustomTooltip}
+          content={LeaderboardChartTooltip}
         />
       </PieChart>
     </div>
