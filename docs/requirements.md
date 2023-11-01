@@ -58,7 +58,7 @@ https://api.dune.com/api/v1/query/3150665/results?api_key=<api_key>
   - [ ] persist the dune values actually
 
 next steps to replicating Dune
-- [ ] hard code 5 trader IDs as queries
+- [x] hard code 5 trader IDs as queries - nah, just filter in here all the rows. just ask Chat to make the query sensible for that and surely get all the needed data
 - [ ] make the data fetch client side so that it's ok on fleek - ipfs wouldn't accept such large files on this page
 - [ ] get smart contract metadata https://docs.moralis.io/web3-data-api/evm/how-to-get-erc20-token-metadata-by-token-addresses
 
