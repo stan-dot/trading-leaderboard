@@ -41,6 +41,11 @@ https://api.dune.com/api/v1/query/3150665/results?api_key=<api_key>
 - [x] Dune replicated
 - [x] add for each address data from Moralis
 
+- [x] fix the rendering error (not mtching the server) - it was the table not having tbody and thead and also dynamic rendering of the charts
+- [x] show both the address and value on the pie chart
+- [x] show stuff other than weth
+- [x] make the import dynamic for the chart for the trader
+
 #### Structured part
 - [ ] run scripts locally to check out if it works
 - [ ] make this into an api
@@ -49,7 +54,12 @@ https://api.dune.com/api/v1/query/3150665/results?api_key=<api_key>
 - [ ] connect outputs to the UI
   - [ ] display the data as another pie chart - what pairs do compose given trader's portfolio.
 - [ ] persistence
-  - [ ] persist the data with mongodb
+  - [ ] persist the token metadata with mongodb
+  - [ ] persist the dune values actually
+
+next steps to replicating Dune
+- [ ] make the data fetch client side so that it's ok on fleek - ipfs wouldn't accept such large files on this page
+- [ ] get smart contract metadata https://docs.moralis.io/web3-data-api/evm/how-to-get-erc20-token-metadata-by-token-addresses
 
 ## technology choices
 - nextjs for the backend
