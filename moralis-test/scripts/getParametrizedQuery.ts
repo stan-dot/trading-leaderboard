@@ -2,7 +2,7 @@
 // import fetch, { Headers } from 'node-fetch';
 // const fetch = require('node-fetch');
 // https://dune.com/docs/api/quick-start/api-js/#example-dune-api-script-for-a-parameterized-query
-// todo from here
+// todo from here. ok but these need a premium api key
 
 const API_KEY = process.env.DUNE_API_KEY; 
 console.log(API_KEY);

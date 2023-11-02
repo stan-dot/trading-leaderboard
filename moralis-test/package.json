@@ -17,6 +17,8 @@
     "@moralisweb3/common-evm-utils": "^2.23.1",
     "@moralisweb3/next": "^2.23.1",
     "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "mongodb": "6.2",
     "moralis": "^2.23.1",
     "next": "12.3.4",
     "next-auth": "^4.24.3",

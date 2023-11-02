@@ -3,7 +3,7 @@ import axios from 'axios';
 const weth_query_url = 'https://api.dune.com/api/v1/query/3150665/results';
 const usdc_query_url = 'https://api.dune.com/api/v1/query/3151753/results';
 
-const API_KEY = process.env.DUNE_API_KEY; // Replace '<api_key>' with your actual API key
+const API_KEY = process.env.DUNE_API_KEY; 
 
 export async function fetchDataFromDuneApi(): Promise<any> {
     try {

@@ -46,21 +46,23 @@ https://api.dune.com/api/v1/query/3150665/results?api_key=<api_key>
 - [x] show stuff other than weth
 - [x] make the import dynamic for the chart for the trader
 
-#### Structured part
-- [ ] run scripts locally to check out if it works
-- [ ] make this into an api
-  - [ ] listen to the data from transactions
-- [ ] connect inputs to the UI
-- [ ] connect outputs to the UI
-  - [ ] display the data as another pie chart - what pairs do compose given trader's portfolio.
-- [ ] persistence
-  - [ ] persist the token metadata with mongodb
-  - [ ] persist the dune values actually
-
-next steps to replicating Dune
+#### Structured part -  next steps to replicating Dune
 - [x] hard code 5 trader IDs as queries - nah, just filter in here all the rows. just ask Chat to make the query sensible for that and surely get all the needed data
-- [ ] make the data fetch client side so that it's ok on fleek - ipfs wouldn't accept such large files on this page
-- [ ] get smart contract metadata https://docs.moralis.io/web3-data-api/evm/how-to-get-erc20-token-metadata-by-token-addresses
+- [x] connect inputs to the UI
+- [x] listen to the data from transactions 
+- [x] run scripts locally to check out if it works - unclear. 
+
+#### Thursday work
+- [ ] Dune data source
+  - [ ] hard code the 6 markets request for top traders
+- [ ] Moralis data source 
+  - [ ] for each trader use Moralis api instead
+  - [ ] get smart contract metadata https://docs.moralis.io/web3-data-api/evm/how-to-get-erc20-token-metadata-by-token-addresses
+- [ ] connect data to the UI
+  - [ ] display the data as another pie chart - what pairs do compose given trader's portfolio.
+  - [ ] filter client side for transactions to a given token (seaport or just the main token here)
+  - [ ] persist the token metadata with mongodb - ok actually only 6 markets are out there
+- [ ] persist the dune top trader values actually. with some refresh button possibly
 
 ## technology choices
 - nextjs for the backend
