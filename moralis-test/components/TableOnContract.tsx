@@ -12,7 +12,7 @@ export function TableOnContract({ rows, tableTitle }: TableOnContractProps) {
   if (rows.length === 0) {
     return <h2>No table here - {tableTitle}</h2>;
   }
-  const sum = rows.reduce((prev, curr) => prev + curr.weth_value, 0);
+  const sum = rows.reduce((prev, curr) => prev + curr.value, 0);
   return (
     <>
       <h2>{tableTitle}</h2>
@@ -33,7 +33,7 @@ export function TableOnContract({ rows, tableTitle }: TableOnContractProps) {
                   {r.address}
                 </td>
                 <td>
-                  {r.weth_value}
+                  {r.value}
                 </td>
                 <td>
                   <a href={getArkhamAddress(r.address)}>

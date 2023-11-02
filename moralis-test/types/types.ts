@@ -16,7 +16,7 @@ export interface Result {
 
 export interface Row {
   address: string
-  weth_value: number
+  value: number
 }
 
 export interface Metadata {
