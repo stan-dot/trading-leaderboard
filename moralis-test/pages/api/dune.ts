@@ -2,6 +2,7 @@ import axios from "axios";
 import { Market } from "../markets/markets";
 import { Row } from "../../types/types";
 import { NextApiRequest, NextApiResponse } from "next";
+import { resolve } from "styled-jsx/css";
 
 const API_KEY = process.env.DUNE_API_KEY;
 
@@ -21,11 +22,11 @@ export default function handler(
   try {
     axios.get(`${url}?api_key=${API_KEY}`).then((r) => {
       const rows = r.data;
-      res.status(200).json({ data: rows });
+    return  res.status(200).json({ data: rows });
     });
   } catch (error) {
     console.error("Error fetching data from Dune API:", error);
-      res.status(400).json({ data: [], error:'no rows found' });
+return      res.status(400).json({ data: [], error:'no rows found' });
   }
 }
 
