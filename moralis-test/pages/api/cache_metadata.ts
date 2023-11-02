@@ -1,9 +1,12 @@
+
+import Moralis from "moralis";
+import { EvmChain } from "@moralisweb3/common-evm-utils";
 import axios from 'axios'; 
 import { connectToDatabase } from 'mongodb';
 
-async function fetchAndCacheData(tokenId) {
+export async function fetchAndCacheData(tokenId:string) {
   const db = await connectToDatabase(process.env.MONGODB_URI);
-  const collection = db.collection('your_collection_name'); // Replace with your collection name
+  const collection = db.collection('token-metadata'); 
 
   // Check cache
   const cachedData = await collection.findOne({ tokenId });
@@ -13,7 +16,8 @@ async function fetchAndCacheData(tokenId) {
 
   // Fetch from external API
   try {
-    // todo here replace with the external API
+    // todo here replace with the external API, which in this case is Moralis
+
     const response = await axios.get(`https://external.api.com/data?tokenId=${tokenId}`);
     const data = response.data;
 
@@ -27,4 +31,14 @@ async function fetchAndCacheData(tokenId) {
   }
 }
 
-module.exports = { fetchAndCacheData };
+// this is on etherscan, but premium
+export async function getTokenMetadata(addresses: string[]) {
+  const chain = EvmChain.GOERLI;
+
+  const response = await Moralis.EvmApi.token.getTokenMetadata({
+    addresses,
+    chain,
+  });
+
+  console.log(response.toJSON());
+}

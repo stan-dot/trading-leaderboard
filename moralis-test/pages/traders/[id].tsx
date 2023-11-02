@@ -1,7 +1,8 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from "next/types";
-import { getWalletTxns, WalletTx } from "../api/getWalletTxns";
+import { getWalletTxns } from "../api/wallet_txn";
+import { WalletTx } from "../../types/walletTxExample";
 import { MoralisData } from "../../types/MoralisData";
-import { fetchFromMoralis } from "../api/addressMoralis";
+import { fetchFromMoralis } from "../api/unused/addressMoralis";
 import useSWR from "swr";
 import { useEffect, useState } from "react";
 import { SWRProvider } from "../../wrappers/swr-provider";

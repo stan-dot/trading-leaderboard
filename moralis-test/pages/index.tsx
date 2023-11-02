@@ -1,6 +1,6 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import { TableOnContract } from "../components/TableOnContract";
-import { Root, Row } from "../types";
+import { Root, Row } from "../types/types";
 import { DynamicLeaderboardChart } from "../dynamic/DynamicLeaderboardChart";
 import Head from "next/head";
 

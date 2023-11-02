@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { MoralisData } from '../../types/MoralisData';
+import { MoralisData } from '../../../types/MoralisData';
 const API_KEY = process.env.MORALIS_API_KEY; // Replace '<api_key>' with your actual API key
 
 export async function fetchFromMoralis(address:string):Promise<MoralisData> {

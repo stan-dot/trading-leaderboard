@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Root, Row } from "../types";
+import { Root, Row } from "../types/types";
 import { getArkhamAddress } from "../utils/getArkhamAddress";
 
 type TableOnContractProps = {

@@ -1,5 +1,5 @@
 import { Pie, PieChart, Tooltip } from "recharts";
-import { Row } from "../types";
+import { Row } from "../types/types";
 
 const LeaderboardChartTooltip = ({ active, payload, label }) => {
   console.log("active: ", active, " payload: ", payload, " label: ", label);
@@ -21,7 +21,7 @@ type LeaderboardChartProps = {
 export default function LeaderboardChart({ rows }: LeaderboardChartProps) {
   return (
     <div>
-      <h2>Pie chart for this contract: </h2>
+      <h2>Pie chart for this contract:</h2>
       <PieChart width={730} height={250}>
         <Pie
           data={rows}

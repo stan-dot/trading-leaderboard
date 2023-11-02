@@ -1,10 +1,11 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from "next/types";
 import useSWR from "swr";
 import { SWRProvider } from "../../wrappers/swr-provider";
-import { fetchFromMoralis } from "../api/addressMoralis";
+import { fetchFromMoralis } from "../api/unused/addressMoralis";
 import Layout from "../../components/Layout";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
+
 export const getServerSideProps: GetServerSideProps<{
   id: string;
 }> = async (context) => {
@@ -35,7 +36,7 @@ export default function Page(
     typeof getServerSideProps
   >,
 ) {
-  const { data, error, isLoading } = useSWR("/api/dune/", fetcher);
+  const { data, error, isLoading } = useSWR("/api/dune", fetcher);
 
   return (
     <Layout>
