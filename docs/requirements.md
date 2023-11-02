@@ -55,8 +55,9 @@ https://api.dune.com/api/v1/query/3150665/results?api_key=<api_key>
 #### Thursday work
 - [ ] Dune data source
   - [ ] hard code the 6 markets request for top traders
-- [ ] Moralis data source 
-  - [ ] for each trader use Moralis api instead - make it client side - fetching from api with swr
+- [ ] Moralis data sourcesdfsdf 
+  - [ ] for each trader use Moralis api instead 
+    - [x] - make it client side - fetching from api with swr
   - [ ] make these into api routes 
   - [ ] one route for getting trading data for markets
   - [ ] the other one for data for getting token meetadata
@@ -66,7 +67,8 @@ https://api.dune.com/api/v1/query/3150665/results?api_key=<api_key>
   - [ ] display the data as another pie chart - what pairs do compose given trader's portfolio.
   - [ ] filter client side for transactions to a given token (seaport or just the main token here)
   - [ ] persist the token metadata with mongodb - ok actually only 6 markets are out there
-- [ ] persist the dune top trader values actually. with some refresh button possibly
+- [ ] persist the dune top trader values actually. 
+  - [ ] add a refresh button 
 
 ## technology choices
 - nextjs for the backend
