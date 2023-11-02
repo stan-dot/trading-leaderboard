@@ -53,7 +53,7 @@ export default function Page(
         <h2>trader: {id}</h2>
         {/* {data.result.length === 0 && <p>no data</p>} */}
         <h3>TXs by this trader, value only</h3>
-        {walletData.result.map((r, i) => {
+        {!walletIsLoading && walletData && walletData.result.map((r, i) => {
           return (
             <div key={i}>
               {r.value}

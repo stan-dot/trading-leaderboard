@@ -4,8 +4,22 @@ import React from "react";
 function Navbar() {
   return (
     <div>
-      <nav>
-        <Link href={"/"}>Home</Link>
+      <nav style={{ display: "flex", flexDirection: "row" }}>
+        <div style={{ padding: 2, margin: 10 }}>
+          <Link href={"/"}>Home</Link>
+        </div>
+        <div
+          style={{ padding: 2, margin: 10 }}
+        >
+          <Link href={"/traders"}>
+            traders
+          </Link>
+        </div>
+        <div style={{ padding: 2, margin: 10 }}>
+          <Link href={"/markets"}>
+            markets
+          </Link>
+        </div>
       </nav>
     </div>
   );

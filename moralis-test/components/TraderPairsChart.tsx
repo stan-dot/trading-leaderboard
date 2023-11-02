@@ -28,24 +28,27 @@ const TraderPairsChart = ({ data }: TraderPairsChartProps) => {
   const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
 
   return (
-    <PieChart width={400} height={400}>
-      <Pie
-        dataKey="value"
-        isAnimationActive={false}
-        data={chartData}
-        cx={200}
-        cy={200}
-        outerRadius={80}
-        fill="#8884d8"
-        label
-      >
-        {chartData.map((entry, index) => (
-          <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-        ))}
-      </Pie>
-      <Tooltip />
-      <Legend />
-    </PieChart>
+    <div style={{ padding: 2, margin: 20, border: "1px #f00 solid" }}>
+      <h2>Piechart</h2>
+      <PieChart width={400} height={400}>
+        <Pie
+          dataKey="value"
+          isAnimationActive={false}
+          data={chartData}
+          cx={200}
+          cy={200}
+          outerRadius={80}
+          fill="#8884d8"
+          label
+        >
+          {chartData.map((entry, index) => (
+            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+          ))}
+        </Pie>
+        <Tooltip />
+        <Legend />
+      </PieChart>
+    </div>
   );
 };
 
