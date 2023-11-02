@@ -1,7 +1,7 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from "next/types";
 import useSWR from "swr";
 import { SWRProvider } from "../../wrappers/swr-provider";
-import { fetchFromMoralis } from "../api/unused/addressMoralis";
+import { moralisDataDetails } from "../api/unused/addressMoralis";
 import Layout from "../../components/Layout";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
@@ -38,11 +38,20 @@ export default function Page(
 ) {
   const { data, error, isLoading } = useSWR("/api/dune", fetcher);
 
+  const { data: tokenData, error: tokenError, isLoading: tokenIsLoading } =
+    useSWR("/api/cache_metadata", fetcher);
+
   return (
     <Layout>
       <SWRProvider>
         {/* <ChartComponent /> */}
         <h2>market: {id}</h2>
+        <div>
+          <h3>About the market</h3>
+          <div>
+            {tokenData}
+          </div>
+        </div>
         <h3>top traders on this market</h3>
         <h3>txns</h3>
         {!isLoading && <p>{data}</p>}

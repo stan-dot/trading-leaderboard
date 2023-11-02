@@ -54,15 +54,15 @@ https://api.dune.com/api/v1/query/3150665/results?api_key=<api_key>
 
 #### Thursday work
 - [ ] Dune data source
-  - [ ] hard code the 6 markets request for top traders
-- [ ] Moralis data sourcesdfsdf 
+  - [x] hard code the 6 markets request for top traders - hard coded 3 for now
+- [ ] Moralis data sources
   - [ ] for each trader use Moralis api instead 
     - [x] - make it client side - fetching from api with swr
-  - [ ] make these into api routes 
-  - [ ] one route for getting trading data for markets
-  - [ ] the other one for data for getting token meetadata
-  - [ ] last one for getting all txns and seeing the market sizes
-  - [ ] get smart contract metadata https://docs.moralis.io/web3-data-api/evm/how-to-get-erc20-token-metadata-by-token-addresses
+  - [x] make these into api routes 
+  - [x] one route for getting trading data for markets
+  - [x] the other one for data for getting token meetadata
+  - [x] last one for getting all txns and seeing the market sizes
+  - [x] get smart contract metadata https://docs.moralis.io/web3-data-api/evm/how-to-get-erc20-token-metadata-by-token-addresses
 - [ ] connect data to the UI
   - [ ] display the data as another pie chart - what pairs do compose given trader's portfolio.
   - [ ] filter client side for transactions to a given token (seaport or just the main token here)

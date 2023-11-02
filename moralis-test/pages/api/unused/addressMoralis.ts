@@ -2,7 +2,7 @@ import axios from 'axios';
 import { MoralisData } from '../../../types/MoralisData';
 const API_KEY = process.env.MORALIS_API_KEY; // Replace '<api_key>' with your actual API key
 
-export async function fetchFromMoralis(address:string):Promise<MoralisData> {
+export async function moralisDataDetails(address:string):Promise<MoralisData> {
   console.log('trying to fetch from moralis about the address:', address);
   try {
     const response = await axios.get(`https://deep-index.moralis.io/api/v2.2/${address}/verbose`, {

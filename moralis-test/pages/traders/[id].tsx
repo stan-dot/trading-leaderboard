@@ -1,17 +1,12 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from "next/types";
-import { getWalletTxns } from "../api/wallet_txn";
-import { WalletTx } from "../../types/walletTxExample";
-import { MoralisData } from "../../types/MoralisData";
-import { fetchFromMoralis } from "../api/unused/addressMoralis";
 import useSWR from "swr";
-import { useEffect, useState } from "react";
-import { SWRProvider } from "../../wrappers/swr-provider";
 import Layout from "../../components/Layout";
-const fetcher = (...args) => fetch(...args).then((res) => res.json());
+import { SWRProvider } from "../../wrappers/swr-provider";
+import { DynamicCurrenciesChart } from "../../dynamic/DynamicCurrenciesChart";
+
+const fetcher = (...args: any[]) => fetch(...args).then((res) => res.json());
 
 export const getServerSideProps: GetServerSideProps<{
-  data: MoralisData;
-  // walletTxns: WalletTx[];
   id: string;
 }> = async (context) => {
   let id: string;
@@ -27,37 +22,38 @@ export const getServerSideProps: GetServerSideProps<{
       id = context.query.id;
     }
   }
-  const response = await fetchFromMoralis(id);
-  console.log("response in the page: ", response);
 
-  // const txs = await getWalletTxns(id);
-  // console.log(txs);
   return {
     props: {
       // pass your fetched data as props or pass the id
       id: id,
-      data: response,
-      // walletTxns: txs,
     },
   };
 };
 
 export default function Page(
-  { id, data }: InferGetServerSidePropsType<
+  { id }: InferGetServerSidePropsType<
     typeof getServerSideProps
   >,
 ) {
-  const { data: helloData, error, isLoading } = useSWR("/api/hello", fetcher);
-  console.log(isLoading, error);
+  const { data: walletData, error: walletError, isLoading: walletIsLoading } =
+    useSWR("/api/wallet_txn", fetcher);
+  console.log(walletData, walletIsLoading, walletError);
+  const { data: tokenData, error: tokenError, isLoading: tokenIsLoading } =
+    useSWR("/api/cache_metadata", fetcher);
+
+  console.log(tokenData);
+  // const response = await moralisDataDetails(id);
+  // console.log("response in the page: ", response);
 
   return (
     <Layout>
       <SWRProvider>
         {/* <ChartComponent /> */}
         <h2>trader: {id}</h2>
-        {data.result.length === 0 && <p>no data</p>}
+        {/* {data.result.length === 0 && <p>no data</p>} */}
         <h3>TXs by this trader, value only</h3>
-        {data.result.map((r, i) => {
+        {walletData.result.map((r, i) => {
           return (
             <div key={i}>
               {r.value}
@@ -65,14 +61,12 @@ export default function Page(
           );
         })}
         <h3>txns</h3>
-        {!isLoading && <p>{helloData.message}</p>}
-        {
-          /* {walletTxns.map((t) => {
-        return <p>hash: {t.hash}</p>;
-      })} */
-        }
+        <DynamicCurrenciesChart data={[]} />
+        {!walletIsLoading && <p>{walletData.message}</p>}
+        <div>
+          <h3>Token data stuff</h3>
+        </div>
       </SWRProvider>
-      erfc
     </Layout>
   );
 }

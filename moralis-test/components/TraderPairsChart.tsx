@@ -1,15 +1,16 @@
 import React from "react";
 import { Cell, Legend, Pie, PieChart, Tooltip } from "recharts";
 
-type TransactionPart = {
+export type TransactionPart = {
   weth_value: number;
   soldAsset: string;
   boughtAsset: string;
 };
 
-type TraderPairsChartProps = {
+export type TraderPairsChartProps = {
   data: TransactionPart[];
 };
+
 const TraderPairsChart = ({ data }: TraderPairsChartProps) => {
   // Aggregate data
   const aggregatedData = data.reduce((acc, item) => {
