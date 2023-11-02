@@ -2,6 +2,7 @@ import axios from 'axios';
 
 const weth_query_url = 'https://api.dune.com/api/v1/query/3150665/results';
 const usdc_query_url = 'https://api.dune.com/api/v1/query/3151753/results';
+// todo do these for all 6 markets, make a mapping dictionary
 
 const API_KEY = process.env.DUNE_API_KEY; 
 

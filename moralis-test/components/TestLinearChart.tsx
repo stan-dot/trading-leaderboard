@@ -14,6 +14,7 @@ const data = [
   { date: "Oct 10", value: 100 },
   { date: "Oct 19", value: 90 },
 ];
+// todo possible for a future time series feature
 
 const CustomTooltip = ({ active, payload }) => {
   if (active) {

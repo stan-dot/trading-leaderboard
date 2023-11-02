@@ -1,5 +1,5 @@
-const { connectToDatabase } = require('./mongodb.js');
-const axios = require('axios'); // If you use Axios for API requests
+import axios from 'axios'; 
+import { connectToDatabase } from 'mongodb';
 
 async function fetchAndCacheData(tokenId) {
   const db = await connectToDatabase(process.env.MONGODB_URI);

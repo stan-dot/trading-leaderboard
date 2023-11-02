@@ -1,6 +1,6 @@
 import React from "react";
 import "card.css";
-import { MoralisTokenMetadataResponse } from "../scripts/getTokenMetadata";
+import { MoralisTokenMetadataResponse } from "../types/MoralisTokenMetadataResponse";
 
 // Define the component
 const TokenMetadataDisplay: React.FC<{ data: MoralisTokenMetadataResponse }> = (
