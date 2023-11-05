@@ -1,7 +1,7 @@
 import { GetTokenMetadataRequest } from "@moralisweb3/common-evm-utils";
 import { useEvmTokenMetadata } from "@moralisweb3/next";
 import Link from "next/link";
-import { markets } from "./markets";
+import { markets } from "../../utils/markets";
 
 function index() {
   const r: GetTokenMetadataRequest = {

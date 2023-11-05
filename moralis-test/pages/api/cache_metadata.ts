@@ -3,6 +3,7 @@ import Moralis from "moralis";
 import { EvmChain } from "@moralisweb3/common-evm-utils";
 import axios from 'axios'; 
 import { connectToDatabase } from 'mongodb';
+import { MoralisTokenMetadataResponse } from "../../types/MoralisTokenMetadataResponse";
 
 export async function fetchAndCacheData(tokenId:string) {
   const db = await connectToDatabase(process.env.MONGODB_URI);
@@ -14,12 +15,11 @@ export async function fetchAndCacheData(tokenId:string) {
     return cachedData.data; // Assuming the stored data is under the 'data' field
   }
 
-  // Fetch from external API
   try {
-    // todo here replace with the external API, which in this case is Moralis
+    // todo here replace with  Moralis
 
     const response = await axios.get(`https://external.api.com/data?tokenId=${tokenId}`);
-    const data = response.data;
+    const data: MoralisTokenMetadataResponse = response.data;
 
     // Store in cache
     await collection.insertOne({ tokenId, data, createdAt: new Date() });

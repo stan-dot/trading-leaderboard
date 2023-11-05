@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 
 export const DynamicLeaderboardChart = dynamic(
-  () => import("../components/LeaderboardChart"),
+  () => import("../components/markets/LeaderboardChart"),
   { ssr: false },
 );

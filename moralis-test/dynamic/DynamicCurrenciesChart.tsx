@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 
 export const DynamicCurrenciesChart = dynamic(
-  () => import("../components/TraderPairsChart"),
+  () => import("../components/traders/TraderPairsChart"),
   { ssr: false },
 );

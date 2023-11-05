@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Market } from "../markets/markets";
+import { Market } from "../../utils/markets";
 import { Row } from "../../types/types";
 import { NextApiRequest, NextApiResponse } from "next";
 import { resolve } from "styled-jsx/css";
@@ -16,17 +16,17 @@ export default function handler(
   res: NextApiResponse<ResponseData>,
 ) {
   console.log(req);
-  const url = req.body;
+  const url = req.query;
     console.log(url);
 
   try {
     axios.get(`${url}?api_key=${API_KEY}`).then((r) => {
       const rows = r.data;
-    return  res.status(200).json({ data: rows });
+      res.status(200).json({ data: rows });
     });
   } catch (error) {
     console.error("Error fetching data from Dune API:", error);
-return      res.status(400).json({ data: [], error:'no rows found' });
+      res.status(400).json({ data: [], error:'no rows found' });
   }
 }
 

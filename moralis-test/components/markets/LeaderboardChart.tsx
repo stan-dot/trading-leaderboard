@@ -1,5 +1,5 @@
 import { Pie, PieChart, Tooltip } from "recharts";
-import { Row } from "../types/types";
+import { Row } from "../../types/types";
 
 const LeaderboardChartTooltip = ({ active, payload, label }) => {
   console.log("active: ", active, " payload: ", payload, " label: ", label);

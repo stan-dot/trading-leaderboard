@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Root, Row } from "../types/types";
-import { getArkhamAddress } from "../utils/getArkhamAddress";
+import { Root, Row } from "../../types/types";
+import { getArkhamAddress } from "../../utils/getArkhamAddress";
 
 type TableOnContractProps = {
   rows: Row[];

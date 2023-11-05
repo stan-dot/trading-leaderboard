@@ -1,10 +1,10 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
-import { TableOnContract } from "../components/TableOnContract";
+import { TableOnContract } from "../components/traders/TableOnContract";
 import { Root, Row } from "../types/types";
 import { DynamicLeaderboardChart } from "../dynamic/DynamicLeaderboardChart";
 import Head from "next/head";
 import Layout from "../components/Layout";
-import { Market, markets } from "./markets/markets";
+import { Market, markets } from "../utils/markets";
 import useSWR from "swr";
 
 export const mockRows: Row[] = [
@@ -48,8 +48,11 @@ export const getServerSideProps: GetServerSideProps<{
 function HomePage(
   { name }: InferGetServerSidePropsType<typeof getServerSideProps>,
 ) {
+  // NOTE this is temporary initial market
   const wethMarket: Market = markets[5];
   const { data, isLoading, error } = useSWR(`/api/dune/${wethMarket.duneUrl}`);
+  const s = JSON.stringify(data);
+  console.log(data, s);
 
   return (
     <div>
@@ -62,9 +65,15 @@ function HomePage(
           />
         </Head>
         <h1>home page</h1>
-        <TableOnContract rows={data} tableTitle="weth data" />
-        <br />
-        <DynamicLeaderboardChart rows={data} />
+        {isLoading ? <p>Loading</p> : (
+          <>
+            <p>data loaded</p>
+            {
+              /* <TableOnContract rows={data} tableTitle="weth data" />
+            <DynamicLeaderboardChart rows={data} /> */
+            }
+          </>
+        )}
       </Layout>
     </div>
   );

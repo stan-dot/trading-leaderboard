@@ -36,7 +36,7 @@ export default function Page(
     typeof getServerSideProps
   >,
 ) {
-  const { data, error, isLoading } = useSWR("/api/dune", fetcher);
+  const { data, error, isLoading } = useSWR(`/api/dune/${id}`, fetcher);
 
   const { data: tokenData, error: tokenError, isLoading: tokenIsLoading } =
     useSWR("/api/cache_metadata", fetcher);
