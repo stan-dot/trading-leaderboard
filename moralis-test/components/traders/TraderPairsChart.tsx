@@ -2,7 +2,7 @@ import React from "react";
 import { Cell, Legend, Pie, PieChart, Tooltip } from "recharts";
 
 export type TransactionPart = {
-  weth_value: number;
+  value: number;
   soldAsset: string;
   boughtAsset: string;
 };
@@ -12,18 +12,7 @@ export type TraderPairsChartProps = {
 };
 
 const TraderPairsChart = ({ data }: TraderPairsChartProps) => {
-  // Aggregate data
-  const aggregatedData = data.reduce((acc, item) => {
-    const key = item.soldAsset; // Assuming soldAsset is the eth address
-    if (!acc[key]) {
-      acc[key] = { name: key, value: 0 };
-    }
-    acc[key].value += item.weth_value;
-    return acc;
-  }, {});
-
-  const chartData = Object.values(aggregatedData);
-
+  const chartData = getFormattedData(data);
   // Colors for each cell in the pie chart
   const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
 
@@ -53,3 +42,16 @@ const TraderPairsChart = ({ data }: TraderPairsChartProps) => {
 };
 
 export default TraderPairsChart;
+function getFormattedData(data: TransactionPart[]) {
+  const aggregatedData = data.reduce((acc, item) => {
+    const key = item.soldAsset;
+    if (!acc[key]) {
+      acc[key] = { name: key, value: 0 };
+    }
+    acc[key].value += item.value;
+    return acc;
+  }, {});
+
+  const chartData = Object.values(aggregatedData);
+  return chartData;
+}

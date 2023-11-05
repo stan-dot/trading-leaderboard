@@ -27,7 +27,6 @@ export default function handler(
 }
 
 export async function fetchAndCacheMetaData(tokenId:string) {
-  // skip this for now, no caching rn
   // const db = await connectToDatabase(process.env.MONGODB_URI);
   // const collection = db.collection('token-metadata');
   // todo add the caching
