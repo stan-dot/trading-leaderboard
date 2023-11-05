@@ -16,6 +16,7 @@
     "@aori-io/sdk": "^0.2.7",
     "@moralisweb3/common-evm-utils": "^2.23.1",
     "@moralisweb3/next": "^2.23.1",
+    "arkit": "^1.6.4",
     "axios": "^1.6.0",
     "dotenv": "^16.3.1",
     "mongodb": "6.2",

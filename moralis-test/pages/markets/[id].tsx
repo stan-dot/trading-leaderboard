@@ -1,13 +1,15 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from "next/types";
 import useSWR from "swr";
-import { SWRProvider } from "../../wrappers/swr-provider";
-import { moralisDataDetails } from "../api/unused/addressMoralis";
 import Layout from "../../components/Layout";
+import MarketPanel from "../../components/markets/MarketPanel";
+import { Market, markets } from "../../utils/markets";
+import { SWRProvider } from "../../wrappers/swr-provider";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 export const getServerSideProps: GetServerSideProps<{
   id: string;
+  market: Market | null;
 }> = async (context) => {
   let id: string;
 
@@ -22,39 +24,37 @@ export const getServerSideProps: GetServerSideProps<{
       id = context.query.id;
     }
   }
+  const market = markets.find((m) => m.contractAddress === id);
 
   return {
     props: {
       // pass your fetched data as props or pass the id
-      id: id,
+      id,
+      market,
     },
   };
 };
 
-export default function Page(
-  { id }: InferGetServerSidePropsType<
+export default function MarketPage(
+  { id, market }: InferGetServerSidePropsType<
     typeof getServerSideProps
   >,
 ) {
-  const { data, error, isLoading } = useSWR(`/api/dune/${id}`, fetcher);
-
-  const { data: tokenData, error: tokenError, isLoading: tokenIsLoading } =
-    useSWR("/api/cache_metadata", fetcher);
-
   return (
     <Layout>
       <SWRProvider>
-        {/* <ChartComponent /> */}
         <h2>market: {id}</h2>
         <div>
           <h3>About the market</h3>
           <div>
-            {tokenData}
+            {market.name}
           </div>
         </div>
         <h3>top traders on this market</h3>
-        <h3>txns</h3>
-        {!isLoading && <p>{data}</p>}
+        <MarketPanel
+          id={id}
+          market={market}
+        />
       </SWRProvider>
     </Layout>
   );

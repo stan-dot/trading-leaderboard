@@ -1,6 +1,6 @@
 import axios from "axios";
 import { Market } from "../../utils/markets";
-import { Row } from "../../types/types";
+import { Row } from "../../types/DuneResponse";
 import { NextApiRequest, NextApiResponse } from "next";
 import { resolve } from "styled-jsx/css";
 

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="730px" preserveAspectRatio="none" style="width:1360px;height:730px;" version="1.1" viewBox="0 0 1360 730" width="1360px" zoomAndPan="magnify"><defs/><g><ellipse cx="113.7424" cy="605.2485" fill="#F8F8F8" rx="54.2424" ry="13.2485" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="75" x="76.2424" y="608.7329">[...moralis]</text><ellipse cx="113.4965" cy="652.1993" fill="#F8F8F8" rx="68.9965" ry="16.1993" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="112" x="57.4965" y="655.6837">addressMoralis</text><ellipse cx="886.9229" cy="24.8846" fill="#F8F8F8" rx="72.4229" ry="16.8846" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="120" x="826.9229" y="28.369">cache_metadata</text><ellipse cx="698.9558" cy="376.8774" fill="#F8F8F8" rx="28.4558" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="36" x="680.9558" y="380.3618">dune</text><!--MD5=[928ae2962bb545d359a5801f003fce71]
+entity _DuneResponse--><rect fill="#F8F8F8" height="33.9688" rx="3" ry="3" style="stroke: #000000; stroke-width: 0.5;" width="113" x="1181" y="271"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="93" x="1191" y="292.1387">DuneResponse</text><!--MD5=[70caf6fdc9cb3b3154a9708dc8a70602]
+entity _DynamicCurrenciesChart--><rect fill="#F8F8F8" height="33.9688" rx="3" ry="3" style="stroke: #000000; stroke-width: 0.5;" width="172" x="437" y="464"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="152" x="447" y="485.1387">DynamicCurrenciesChart</text><!--MD5=[f3a5624b244c7940d10b4a8e801e8afe]
+entity _DynamicLeaderboardChart--><rect fill="#F8F8F8" height="33.9688" rx="3" ry="3" style="stroke: #000000; stroke-width: 0.5;" width="215" x="6" y="686"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="195" x="16" y="707.1387">DynamicLeaderboardChart</text><ellipse cx="698.9914" cy="420.8774" fill="#F8F8F8" rx="31.9914" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="41" x="678.4914" y="424.3618">Footer</text><ellipse cx="1237.5605" cy="444.2121" fill="#F8F8F8" rx="71.5605" ry="16.7121" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="118" x="1178.5605" y="447.6965">getArkhamAddress</text><ellipse cx="329.2487" cy="604.8774" fill="#F8F8F8" rx="27.7487" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="35" x="311.7487" y="608.3618">hello</text><ellipse cx="522.9914" cy="356.8774" fill="#F8F8F8" rx="31.9914" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="41" x="502.4914" y="360.3618">Layout</text><ellipse cx="887.1118" cy="170.0224" fill="#F8F8F8" rx="78.1118" ry="18.0224" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="133" x="820.6118" y="173.5067">LeaderboardPieChart</text><ellipse cx="887.1409" cy="431.0282" fill="#F8F8F8" rx="98.1409" ry="22.0282" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="177" x="798.6409" y="434.5126">LeaderboardTableForMarket</text><ellipse cx="698.9787" cy="187.8957" fill="#F8F8F8" rx="54.9787" ry="13.3957" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="77" x="660.4787" y="191.3801">MarketPanel</text><ellipse cx="698.9264" cy="250.8774" fill="#F8F8F8" rx="45.4264" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="60" x="668.9264" y="254.3618">markets</text><!--MD5=[cc5de2e129ea6e24421f47895e79ebd2]
+entity _markets--><rect fill="#F8F8F8" height="33.9688" rx="3" ry="3" style="stroke: #000000; stroke-width: 0.5;" width="71" x="1020" y="256"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="51" x="1030" y="277.1387">markets</text><ellipse cx="113.2834" cy="273.1567" fill="#F8F8F8" rx="58.7834" ry="14.1567" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="87" x="69.7834" y="276.6411">markets/[id]</text><!--MD5=[87780871d9f22732ed9bc7b7f5480c43]
+entity _MoralisTokenMetadataResponse--><rect fill="#F8F8F8" height="33.9688" rx="3" ry="3" style="stroke: #000000; stroke-width: 0.5;" width="223" x="1126" y="31"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="203" x="1136" y="52.1387">MoralisTokenMetadataResponse</text><ellipse cx="698.8198" cy="332.8774" fill="#F8F8F8" rx="34.8198" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="45" x="676.3198" y="336.3618">Navbar</text><ellipse cx="328.8501" cy="649.97" fill="#F8F8F8" rx="55.3501" ry="13.47" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="78" x="289.8501" y="653.4544">next-env.d</text><ellipse cx="329.1127" cy="332.8774" fill="#F8F8F8" rx="34.1127" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="44" x="307.1127" y="336.3618">pages</text><!--MD5=[4466c2bf2d535d7d4180c0f8083a0fcb]
+entity _swr_provider--><rect fill="#F8F8F8" height="33.9688" rx="3" ry="3" style="stroke: #000000; stroke-width: 0.5;" width="99" x="473.5" y="400"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="79" x="483.5" y="421.1387">swr-provider</text><ellipse cx="328.8555" cy="698.9711" fill="#F8F8F8" rx="72.8555" ry="16.9711" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="121" x="268.3555" y="702.4555">TestLinearChart</text><ellipse cx="886.9692" cy="77.9938" fill="#F8F8F8" rx="75.4692" ry="17.4938" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="127" x="823.4692" y="81.4782">TokenMetadataCard</text><!--MD5=[f8542b6f8a1a8249ae441c8c74084435]
+entity _TraderPairsChart--><rect fill="#F8F8F8" height="33.9688" rx="3" ry="3" style="stroke: #000000; stroke-width: 0.5;" width="126" x="824" y="490"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="106" x="834" y="511.1387">TraderPairsChart</text><ellipse cx="699.2424" cy="507.2485" fill="#F8F8F8" rx="54.2424" ry="13.2485" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="75" x="661.7424" y="510.7329">TraderPanel</text><ellipse cx="113.598" cy="411.8774" fill="#F8F8F8" rx="42.598" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="56" x="85.598" y="415.3618">traders</text><ellipse cx="113.7382" cy="506.8476" fill="#F8F8F8" rx="57.2382" ry="13.8476" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="83" x="72.2382" y="510.332">traders/[id]</text><ellipse cx="113.3777" cy="178.1755" fill="#F8F8F8" rx="53.8777" ry="13.1755" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="74" x="76.3777" y="181.6599">wallet_txn</text><!--MD5=[e3d767b4df92e0ddcde62f1383312e71]
+entity _WalletTx--><rect fill="#F8F8F8" height="33.9688" rx="3" ry="3" style="stroke: #000000; stroke-width: 0.5;" width="73" x="486.5" y="161"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="53" x="496.5" y="182.1387">WalletTx</text><!--MD5=[2d7ced115190b5b4a598dbcc13cf666a]
+link <b>cache_metadata</b> to _MoralisTokenMetadataResponse--><path d="M957.269,29.572 C1003.902,32.649 1066.53,36.782 1120.65,40.354 " fill="none" id="&lt;b&gt;cache_metadata&lt;/b&gt;-&gt;_MoralisTokenMetadataResponse" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="1125.86,40.698,1117.1423,36.1151,1120.8708,40.3694,1116.6166,44.0978,1125.86,40.698" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[75b1babf35d043b9ddeb1675ed5e46ca]
+link <b>dune</b> to _DuneResponse--><path d="M727.713,376.381 C778.889,374.881 891.532,369.908 985,354 C1052.04,342.59 1127.26,321.755 1177.83,306.538 " fill="none" id="&lt;b&gt;dune&lt;/b&gt;-&gt;_DuneResponse" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="1182.65,305.083,1172.8752,303.8771,1177.8667,306.539,1175.2048,311.5304,1182.65,305.083" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[c2837ff8b8d2ef2a02f5919c5d67bba8]
+link <b>dune</b> to _markets--><path d="M724.154,370.669 C742.044,366.002 767.023,359.53 789,354 C875.974,332.113 900.501,336.056 985,306 C995.804,302.157 1007.18,297.18 1017.52,292.262 " fill="none" id="&lt;b&gt;dune&lt;/b&gt;-&gt;_markets" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="1022.2,290.011,1012.3551,290.2895,1017.6902,292.1701,1015.8096,297.5052,1022.2,290.011" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[9e36345e9a94352587fb5dbbeac1f573]
+link Layout to Footer--><path d="M547.466,365.631 C579.207,377.306 635.756,398.106 669.778,410.619 " fill="none" id="Layout-&gt;Footer" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="674.628,412.403,667.5634,405.5407,669.9357,410.6761,664.8003,413.0484,674.628,412.403" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[a7dcb4ef07c86301e5602a25fde90cb1]
+link Layout to Navbar--><path d="M553.517,352.929 C583.152,348.841 628.895,342.532 660.952,338.11 " fill="none" id="Layout-&gt;Navbar" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="665.975,337.417,656.513,334.6837,661.0219,338.0999,657.6057,342.6087,665.975,337.417" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[d2af05081a44e86c350183ce3836d5f2]
+link LeaderboardPieChart to _DuneResponse--><path d="M931.785,184.825 C995.073,206.254 1112.09,245.875 1181.24,269.289 " fill="none" id="LeaderboardPieChart-&gt;_DuneResponse" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="1186.13,270.946,1178.8838,264.2757,1181.3931,269.3456,1176.3232,271.8548,1186.13,270.946" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[5542e66283900e2c307d38236d44dcd9]
+link LeaderboardTableForMarket to _DuneResponse--><path d="M967.584,418.239 C1005.873,410.494 1051.85,398.794 1091,382 C1136.31,362.564 1183.26,329.473 1211.16,308.186 " fill="none" id="LeaderboardTableForMarket-&gt;_DuneResponse" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="1215.14,305.134,1205.5647,307.4392,1211.1732,308.1777,1210.4347,313.7862,1215.14,305.134" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[82a82e7768e3a16e913a23955e2cad8b]
+link LeaderboardTableForMarket to getArkhamAddress--><path d="M984.152,434.587 C1040.05,436.672 1109.48,439.262 1161.35,441.197 " fill="none" id="LeaderboardTableForMarket-&gt;getArkhamAddress" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="1166.63,441.394,1157.7848,437.0625,1161.6334,441.2083,1157.4877,445.057,1166.63,441.394" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[522218bf4c54925ecadc9a94c526fa6e]
+link MarketPanel to _DuneResponse--><path d="M718.775,175.206 C736.125,164.213 763.063,149.184 789,143 C873.736,122.796 900.85,120.48 985,143 C1076.27,167.425 1168.72,233.825 1211.69,267.633 " fill="none" id="MarketPanel-&gt;_DuneResponse" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="1215.69,270.8,1211.1103,262.0807,1211.7676,267.6992,1206.1491,268.3565,1215.69,270.8" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[a823943a14a7f45b2da10b1ad5275755]
+link MarketPanel to LeaderboardPieChart--><path d="M750.334,183.129 C768.584,181.363 789.632,179.326 809.621,177.392 " fill="none" id="MarketPanel-&gt;LeaderboardPieChart" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="814.678,176.902,805.3347,173.7871,809.7012,177.3834,806.1049,181.7499,814.678,176.902" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[3b33ecf48a49e70b25c7d28d9a460d57]
+link MarketPanel to LeaderboardTableForMarket--><path d="M719.811,200.586 C730.65,208.047 743.889,218.149 754,229 C806.006,284.813 850.815,363.431 872.352,404.171 " fill="none" id="MarketPanel-&gt;LeaderboardTableForMarket" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="874.862,408.947,874.2162,399.1193,872.5361,404.5209,867.1345,402.8408,874.862,408.947" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[57478f1ab7ea1e599b759b38b71b256c]
+link MarketPanel to _markets--><path d="M744.893,195.475 C801.439,205.34 901.331,224.267 985,248 C994.859,250.797 1005.336,254.284 1015.08,257.758 " fill="none" id="MarketPanel-&gt;_markets" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="1019.81,259.459,1012.7052,252.6383,1015.1076,257.7597,1009.9863,260.1621,1019.81,259.459" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[fac298a1fbb8d45060a8fbc2be6a0b47]
+link MarketPanel to TokenMetadataCard--><path d="M711.991,174.578 C728,157.396 757.961,127.736 789,110 C801.547,102.83 815.935,96.983 829.721,92.342 " fill="none" id="MarketPanel-&gt;TokenMetadataCard" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="834.768,90.686,824.9696,89.6904,830.0171,92.2444,827.463,97.2919,834.768,90.686" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[46f154b21a1d091de2c848e73339f7dc]
+link <b>markets</b> to _markets--><path d="M743.824,253.72 C813.334,258.033 947.821,266.38 1014.71,270.531 " fill="none" id="&lt;b&gt;markets&lt;/b&gt;-&gt;_markets" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="1019.8,270.847,1011.0692,266.2893,1014.8099,270.5328,1010.5664,274.2735,1019.8,270.847" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[e6779655bc9dedd31449eb540c1e15b9]
+link <b>markets/[id]</b> to Layout--><path d="M170.889,276.529 C229.397,281.099 323.191,290.983 402,311 C435.654,319.548 472.737,334.703 496.643,345.272 " fill="none" id="&lt;b&gt;markets/[id]&lt;/b&gt;-&gt;Layout" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="501.244,347.322,494.6502,340.0061,496.6766,345.2876,491.3951,347.314,501.244,347.322" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[b75f844b59b6662b21ed621e212505d4]
+link <b>markets/[id]</b> to MarketPanel--><path d="M165.854,266.509 C255.803,254.99 447.646,229.751 609,204 C622.139,201.903 636.332,199.441 649.442,197.085 " fill="none" id="&lt;b&gt;markets/[id]&lt;/b&gt;-&gt;MarketPanel" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="654.601,196.154,645.0341,193.8141,649.6803,197.041,646.4534,201.6872,654.601,196.154" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[d45af6ed96e1b38dd5ac7a87321607f0]
+link <b>markets/[id]</b> to _markets--><path d="M169.828,277.217 C248.169,282.814 395.934,292 522,292 C522,292 522,292 700,292 C814.201,292 948.801,282.046 1014.44,276.548 " fill="none" id="&lt;b&gt;markets/[id]&lt;/b&gt;-&gt;_markets" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="1019.81,276.095,1010.5003,272.8809,1014.8284,276.5235,1011.1859,280.8515,1019.81,276.095" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[c1b5b97e1b814c836abb484e7934407f]
+link <b>markets/[id]</b> to _swr_provider--><path d="M133.26,286.32 C159.519,304.379 209.276,336.495 256,355 C326.683,382.995 413.164,400.242 467.931,409.224 " fill="none" id="&lt;b&gt;markets/[id]&lt;/b&gt;-&gt;_swr_provider" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="473.13,410.068,464.8859,404.6796,468.1944,409.268,463.606,412.5765,473.13,410.068" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[4b7407eb1066afca1dd6d01ea15d3ca5]
+link <b>pages</b> to Layout--><path d="M361.705,336.963 C396.221,341.278 451.259,348.157 487.014,352.627 " fill="none" id="&lt;b&gt;pages&lt;/b&gt;-&gt;Layout" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="492.145,353.268,483.7119,348.1805,487.1838,352.6466,482.7177,356.1185,492.145,353.268" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[8c11f3f23f05308f6c63ca5b1846ccd1]
+link TokenMetadataCard to _MoralisTokenMetadataResponse--><path d="M958.105,71.965 C1004.607,67.962 1066.74,62.614 1120.51,57.985 " fill="none" id="TokenMetadataCard-&gt;_MoralisTokenMetadataResponse" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="1125.68,57.539,1116.3703,54.3252,1120.6984,57.9676,1117.056,62.2957,1125.68,57.539" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[4c9379f73d9563a0ad67eeeeb1e4b0b2]
+link TraderPanel to LeaderboardTableForMarket--><path d="M727.445,495.786 C755.377,484.373 799.36,466.401 833.924,452.279 " fill="none" id="TraderPanel-&gt;LeaderboardTableForMarket" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="838.952,450.224,829.1077,449.9257,834.3235,452.1154,832.1339,457.3313,838.952,450.224" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[c187da6b8e86a67464f83ecaff47bc1f]
+link TraderPanel to _TraderPairsChart--><path d="M753.3,507 C773.673,507 797.176,507 818.688,507 " fill="none" id="TraderPanel-&gt;_TraderPairsChart" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="823.821,507,814.821,503,818.821,507,814.821,511,823.821,507" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[95caa9324167a4bf2974fb8e0d0494ba]
+link <b>traders</b> to Layout--><path d="M152.837,406.826 C231.778,396.171 411.418,371.925 487.223,361.694 " fill="none" id="&lt;b&gt;traders&lt;/b&gt;-&gt;Layout" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="492.499,360.982,483.045,358.2212,487.5439,361.6505,484.1146,366.1494,492.499,360.982" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[4db975b114de44b1a565fd56355fa59b]
+link <b>traders/[id]</b> to _DynamicCurrenciesChart--><path d="M169.034,503.521 C236.201,499.235 351.256,491.894 431.69,486.762 " fill="none" id="&lt;b&gt;traders/[id]&lt;/b&gt;-&gt;_DynamicCurrenciesChart" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="436.938,486.427,427.7014,483.0085,431.9482,486.7456,428.2111,490.9923,436.938,486.427" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[9e75ba71a97ac092107ccf7244c349b5]
+link <b>traders/[id]</b> to Layout--><path d="M146.137,495.355 C223.201,466.987 419.716,394.651 493.462,367.505 " fill="none" id="&lt;b&gt;traders/[id]&lt;/b&gt;-&gt;Layout" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="498.557,365.629,488.7293,364.9836,493.8647,367.3559,491.4924,372.4913,498.557,365.629" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[43389f251da16a9d1b7ca014d7c709ba]
+link <b>traders/[id]</b> to _swr_provider--><path d="M156.575,497.707 C230.994,481.271 385.724,447.098 467.936,428.941 " fill="none" id="&lt;b&gt;traders/[id]&lt;/b&gt;-&gt;_swr_provider" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="473.244,427.768,463.593,425.804,468.3618,428.8468,465.319,433.6155,473.244,427.768" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[897946aaca52ece12a7ceb180b4ff55a]
+link <b>traders/[id]</b> to TraderPanel--><path d="M170.713,507 C281.492,507 527.006,507 639.562,507 " fill="none" id="&lt;b&gt;traders/[id]&lt;/b&gt;-&gt;TraderPanel" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="644.82,507,635.82,503,639.82,507,635.82,511,644.82,507" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[80b30f4d6f02db79e8a73c9bb12e4529]
+link <b>wallet_txn</b> to _WalletTx--><path d="M167.774,178 C250.255,178 407.071,178 481.215,178 " fill="none" id="&lt;b&gt;wallet_txn&lt;/b&gt;-&gt;_WalletTx" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="486.408,178,477.408,174,481.408,178,477.408,182,486.408,178" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[59ed4d9a828fdd30d0fbf4e057def519]
+link <b>[...moralis]</b> to <b>addressMoralis</b>--><!--MD5=[adde7165b1e00bec6a0c524e39a57b39]
+link <b>addressMoralis</b> to _DynamicLeaderboardChart--><!--MD5=[83436d745dc8be35b5bc3fcb24585d32]
+link <b>[...moralis]</b> to <b>hello</b>--><!--MD5=[d34f7218e3a8bca26b3faaeaee81a785]
+link <b>hello</b> to <b>next-env.d</b>--><!--MD5=[733c8db0c7ae8daafc306d3d82a6dc38]
+link <b>next-env.d</b> to <b>TestLinearChart</b>--><script type="text/plantuml"><![CDATA[MD5=[8208bbe310ef3f0480d1db4149b11356]
+@startuml
+
+scale max 1920 width
+left to right direction
+
+skinparam nodesep 18
+skinparam ranksep 35
+skinparam monochrome true
+skinparam shadowing false
+skinparam defaultFontName Tahoma
+skinparam defaultFontSize 12
+skinparam roundCorner 6
+skinparam dpi 150
+skinparam arrowColor black
+skinparam arrowThickness 0.5
+skinparam packageTitleAlignment left
+
+skinparam usecase {
+  borderThickness 0.5
+}
+
+skinparam rectangle {
+  borderThickness 0.5
+}
+
+skinparam component {
+  borderThickness 1
+}
+
+
+(<b>[...moralis]</b>)
+(<b>addressMoralis</b>)
+(<b>cache_metadata</b>)
+(<b>dune</b>)
+rectangle "DuneResponse" as _DuneResponse
+rectangle "DynamicCurrenciesChart" as _DynamicCurrenciesChart
+rectangle "<b>DynamicLeaderboardChart</b>" as _DynamicLeaderboardChart
+(Footer)
+(getArkhamAddress)
+(<b>hello</b>)
+(Layout)
+(LeaderboardPieChart)
+(LeaderboardTableForMarket)
+(MarketPanel)
+(<b>markets</b>)
+rectangle "markets" as _markets
+(<b>markets/[id]</b>)
+rectangle "MoralisTokenMetadataResponse" as _MoralisTokenMetadataResponse
+(Navbar)
+(<b>next-env.d</b>)
+(<b>pages</b>)
+rectangle "swr-provider" as _swr_provider
+(<b>TestLinearChart</b>)
+(TokenMetadataCard)
+rectangle "TraderPairsChart" as _TraderPairsChart
+(TraderPanel)
+(<b>traders</b>)
+(<b>traders/[id]</b>)
+(<b>wallet_txn</b>)
+rectangle "WalletTx" as _WalletTx
+
+
+(<b>cache_metadata</b>) ---[thickness=1]> _MoralisTokenMetadataResponse
+(<b>dune</b>) ---[thickness=1]> _DuneResponse
+(<b>dune</b>) ---[thickness=1]> _markets
+(Layout) --> (Footer)
+(Layout) --> (Navbar)
+(LeaderboardPieChart) ---> _DuneResponse
+(LeaderboardTableForMarket) ---> _DuneResponse
+(LeaderboardTableForMarket) ---> (getArkhamAddress)
+(MarketPanel) ---> _DuneResponse
+(MarketPanel) --> (LeaderboardPieChart)
+(MarketPanel) --> (LeaderboardTableForMarket)
+(MarketPanel) ---> _markets
+(MarketPanel) --> (TokenMetadataCard)
+(<b>markets</b>) ---[thickness=1]> _markets
+(<b>markets/[id]</b>) ---[thickness=1]> (Layout)
+(<b>markets/[id]</b>) ----[thickness=1]> (MarketPanel)
+(<b>markets/[id]</b>) ---[thickness=1]> _markets
+(<b>markets/[id]</b>) ---[thickness=1]> _swr_provider
+(<b>pages</b>) --[thickness=1]> (Layout)
+(TokenMetadataCard) ---> _MoralisTokenMetadataResponse
+(TraderPanel) --> (LeaderboardTableForMarket)
+(TraderPanel) --> _TraderPairsChart
+(<b>traders</b>) ---[thickness=1]> (Layout)
+(<b>traders/[id]</b>) ---[thickness=1]> _DynamicCurrenciesChart
+(<b>traders/[id]</b>) ---[thickness=1]> (Layout)
+(<b>traders/[id]</b>) ---[thickness=1]> _swr_provider
+(<b>traders/[id]</b>) ----[thickness=1]> (TraderPanel)
+(<b>wallet_txn</b>) ---[thickness=1]> _WalletTx
+
+@enduml
+
+
+' View and edit on https://arkit.pro
+]]></script></g></svg>

@@ -1,5 +1,6 @@
+"use client";
 import { Pie, PieChart, Tooltip } from "recharts";
-import { Row } from "../../types/types";
+import { Row } from "../../types/DuneResponse";
 
 const LeaderboardChartTooltip = ({ active, payload, label }) => {
   console.log("active: ", active, " payload: ", payload, " label: ", label);
@@ -18,7 +19,7 @@ type LeaderboardChartProps = {
   rows: Row[];
 };
 
-export default function LeaderboardChart({ rows }: LeaderboardChartProps) {
+export default function LeaderboardPieChart({ rows }: LeaderboardChartProps) {
   return (
     <div>
       <h2>Pie chart for this contract:</h2>

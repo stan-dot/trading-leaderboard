@@ -1,8 +1,9 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from "next/types";
 import useSWR from "swr";
 import Layout from "../../components/Layout";
-import { SWRProvider } from "../../wrappers/swr-provider";
+import TraderPanel from "../../components/traders/TraderPanel";
 import { DynamicCurrenciesChart } from "../../dynamic/DynamicCurrenciesChart";
+import { SWRProvider } from "../../wrappers/swr-provider";
 
 const fetcher = (...args: any[]) => fetch(...args).then((res) => res.json());
 
@@ -31,7 +32,7 @@ export const getServerSideProps: GetServerSideProps<{
   };
 };
 
-export default function Page(
+export default function TraderPage(
   { id }: InferGetServerSidePropsType<
     typeof getServerSideProps
   >,
@@ -39,10 +40,7 @@ export default function Page(
   const { data: walletData, error: walletError, isLoading: walletIsLoading } =
     useSWR("/api/wallet_txn", fetcher);
   console.log(walletData, walletIsLoading, walletError);
-  const { data: tokenData, error: tokenError, isLoading: tokenIsLoading } =
-    useSWR("/api/cache_metadata", fetcher);
 
-  console.log(tokenData);
   // const response = await moralisDataDetails(id);
   // console.log("response in the page: ", response);
 
@@ -66,6 +64,7 @@ export default function Page(
         <div>
           <h3>Token data stuff</h3>
         </div>
+        <TraderPanel id={id} />
       </SWRProvider>
     </Layout>
   );

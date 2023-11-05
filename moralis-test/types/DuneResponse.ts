@@ -1,4 +1,4 @@
-export interface Root {
+export interface DuneResponse {
   execution_id: string
   query_id: number
   state: string

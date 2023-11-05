@@ -1,6 +1,6 @@
 import Moralis from "moralis";
 import { EvmChain } from "@moralisweb3/common-evm-utils";
-import { WalletTx } from "../../types/walletTxExample";
+import { WalletTx } from "../../types/WalletTx";
 import { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
 

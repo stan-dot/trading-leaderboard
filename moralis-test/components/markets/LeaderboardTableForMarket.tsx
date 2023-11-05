@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Root, Row } from "../../types/types";
+import { DuneResponse, Row } from "../../types/DuneResponse";
 import { getArkhamAddress } from "../../utils/getArkhamAddress";
 
 type TableOnContractProps = {
@@ -7,7 +7,9 @@ type TableOnContractProps = {
   tableTitle: string;
 };
 
-export function TableOnContract({ rows, tableTitle }: TableOnContractProps) {
+export function LeaderboardTableForMarket(
+  { rows, tableTitle }: TableOnContractProps,
+) {
   // console.log("rows:", rows);
   if (rows.length === 0) {
     return <h2>No table here - {tableTitle}</h2>;
