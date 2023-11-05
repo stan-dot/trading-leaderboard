@@ -13,6 +13,7 @@ export type TraderPairsChartProps = {
 
 const TraderPairsChart = ({ data }: TraderPairsChartProps) => {
   const chartData = getFormattedData(data);
+
   // Colors for each cell in the pie chart
   const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
 
@@ -55,3 +56,4 @@ function getFormattedData(data: TransactionPart[]) {
   const chartData = Object.values(aggregatedData);
   return chartData;
 }
+

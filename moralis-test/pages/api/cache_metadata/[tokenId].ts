@@ -2,7 +2,7 @@
 import { EvmChain } from "@moralisweb3/common-evm-utils";
 import Moralis from "moralis";
 import { NextApiRequest, NextApiResponse } from "next";
-import { MoralisTokenMetadataResponse } from "../../types/MoralisTokenMetadataResponse";
+import { MoralisTokenMetadataResponse } from "../../../types/MoralisTokenMetadataResponse";
 
 type ResponseData = {
   data: MoralisTokenMetadataResponse[];
@@ -14,7 +14,7 @@ export default function handler(
   res: NextApiResponse<ResponseData>,
 ) {
   console.log(req);
-  const tokenId = req.body;
+  const { tokenId } = req.body;
   console.log(tokenId);
 
   try {
@@ -49,7 +49,7 @@ export async function fetchAndCacheMetaData(tokenId:string) {
     return data;
   } catch (error) {
     console.error('API fetch error:', error);
-    throw new Error('Error fetching data from the API');
+    // throw new Error('Error fetching data from the API');
   }
 }
 

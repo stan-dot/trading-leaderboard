@@ -44,7 +44,7 @@ function MarketPanel({ id, market }: MarketPanelProps) {
   const { data: tokenData, error: tokenError, isLoading: tokenIsLoading } =
     useSWR(`/api/cache_metadata/${id}`, fetcher);
   const { data: duneData, error: duneError, isLoading: duneIsLoading } = useSWR(
-    `/api/dune/${id}`,
+    `/api/dune/${market.duneQueryNumber}`,
     fetcher,
   );
   console.log("token data :", tokenData);

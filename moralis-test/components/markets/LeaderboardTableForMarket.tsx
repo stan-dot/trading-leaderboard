@@ -14,7 +14,9 @@ export function LeaderboardTableForMarket(
   if (!rows || rows.length === 0) {
     return <h2>No table here - {tableTitle}</h2>;
   }
-  const sum = rows.reduce((prev, curr) => prev + curr.value, 0);
+  const sum = Array.isArray(rows)
+    ? rows.reduce((prev, curr) => prev + curr.value, 0)
+    : 0;
   return (
     <>
       <h2>{tableTitle}</h2>
@@ -28,7 +30,7 @@ export function LeaderboardTableForMarket(
           </tr>
         </thead>
         <tbody>
-          {rows.map((r, i) => {
+          {Array.isArray(rows) && rows.map((r, i) => {
             return (
               <tr key={`table-row-${i}`}>
                 <td>

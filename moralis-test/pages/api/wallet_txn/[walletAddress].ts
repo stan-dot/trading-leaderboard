@@ -1,7 +1,7 @@
 import { EvmChain } from "@moralisweb3/common-evm-utils";
 import Moralis from "moralis";
 import { NextApiRequest, NextApiResponse } from "next";
-import { WalletTx } from "../../types/WalletTx";
+import { EvmTransaction } from "../../../types/WalletTx";
 
 type ResponseData = {
   error?: string;
@@ -12,12 +12,12 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<ResponseData>,
 ) {
-  console.log(req);
-  const walletUrl = req.body;
-  console.log(walletUrl);
+  console.log('query: ', req.query);
+  const {  walletAddress: walletAddressMaybeArray } = req.query;
 
+  const walletAddress = Array.isArray(walletAddressMaybeArray) ? walletAddressMaybeArray.join('') : walletAddressMaybeArray;
   try {
-    getWalletTxns(walletUrl).then((txns) => {
+    getWalletTxns(walletAddress).then((txns) => {
       res.status(200).json({ txns });
     });
   } catch (error) {
@@ -25,7 +25,7 @@ export default function handler(
   }
 }
 
-// todo change that for production
+// todo change the limit for production
 const txnsLimit = 10;
 export const getWalletTxns = async (address: string): Promise<WalletTx[]> => {
   const chain = EvmChain.GOERLI;

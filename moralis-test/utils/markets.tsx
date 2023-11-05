@@ -1,7 +1,7 @@
 export type Market = {
   contractAddress: string;
   name: string;
-  duneUrl?: string;
+  duneQueryNumber?: string;
 };
 
 export const getMarketLink = (m: Market) =>
@@ -11,7 +11,7 @@ export const markets: Market[] = [
   {
     contractAddress: "0x98a47a182880e0b94a403f9f174116d816d171de",
     name: "green",
-    duneUrl: "https://api.dune.com/api/v1/query/3168397/results",
+    duneQueryNumber: "3168397",
   },
   {
     contractAddress: "0x1325712f116faddb20c8905bb0c41bb3be1247c1",
@@ -28,11 +28,11 @@ export const markets: Market[] = [
   {
     contractAddress: "0xd3664b5e72b46eaba722ab6f43c22dbf40181954",
     name: "usdc",
-    duneUrl: "https://api.dune.com/api/v1/query/3151753/results",
+    duneQueryNumber: "3151753",
   },
   {
     contractAddress: "0x2715ccea428f8c7694f7e78b2c89cb454c5f7294",
     name: "weth",
-    duneUrl: "https://api.dune.com/api/v1/query/3150665/results",
+    duneQueryNumber: "3150665",
   },
 ];
