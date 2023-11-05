@@ -1,9 +1,7 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from "next/types";
-import useSWR from "swr";
 import Layout from "../../components/Layout";
 import MarketPanel from "../../components/markets/MarketPanel";
 import { Market, markets } from "../../utils/markets";
-import { SWRProvider } from "../../wrappers/swr-provider";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
@@ -42,20 +40,11 @@ export default function MarketPage(
 ) {
   return (
     <Layout>
-      <SWRProvider>
-        <h2>market: {id}</h2>
-        <div>
-          <h3>About the market</h3>
-          <div>
-            {market.name}
-          </div>
-        </div>
-        <h3>top traders on this market</h3>
-        <MarketPanel
-          id={id}
-          market={market}
-        />
-      </SWRProvider>
+      <h1>Market panel</h1>
+      <MarketPanel
+        id={id}
+        market={market}
+      />
     </Layout>
   );
 }

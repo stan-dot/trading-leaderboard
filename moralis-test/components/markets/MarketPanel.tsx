@@ -1,11 +1,12 @@
 "use client";
-import React from "react";
+import React, { Suspense } from "react";
 import useSWR from "swr";
 import LeaderboardPieChart from "./LeaderboardPieChart";
 import { LeaderboardTableForMarket } from "./LeaderboardTableForMarket";
 import { Market } from "../../utils/markets";
 import { Row } from "../../types/DuneResponse";
 import TokenMetadataDisplay from "./TokenMetadataCard";
+import { SWRProvider } from "../../wrappers/swr-provider";
 
 export const mockRows: Row[] = [
   { address: "0xfd3f35e6dedb01d57200e0217a7893d6dc794208", value: 6736 },
@@ -50,24 +51,30 @@ function MarketPanel({ id, market }: MarketPanelProps) {
   console.log("dune data :", duneData);
 
   return (
-    <div>
-      MarketsPanel
-      <h2>market: {id}</h2>
+    <SWRProvider>
       <div>
-        <h3>About the market</h3>
+        <h2>market: {id}</h2>
         <div>
-          {tokenData}
+          <h3>About the market</h3>
+          <div>
+            {market.name}
+          </div>
         </div>
+        {/* <LeaderboardPieChart rows={mockRows} /> */}
+        <Suspense fallback={<p>loading</p>}>
+          <LeaderboardPieChart rows={duneData} />
+          {/* <LeaderboardTableForMarket rows={mockRows} tableTitle={`Biggest traders for ${market.name}`} /> */}
+          <LeaderboardTableForMarket
+            rows={duneData}
+            tableTitle={`Biggest traders for ${market.name}`}
+          />
+        </Suspense>
+        {tokenIsLoading && tokenData
+          ? <p>token is loading</p>
+          : <p>data loaded</p>}
+        {/* : <TokenMetadataDisplay data={tokenData} />} */}
       </div>
-      <h3>top traders on this market</h3>
-      <h3>txns</h3>
-      <LeaderboardPieChart rows={mockRows} />
-      <LeaderboardTableForMarket rows={mockRows} tableTitle={""} />
-      {tokenIsLoading && tokenData
-        ? <p>token is loading</p>
-        : <p>data loaded :{tokenData}</p>}
-      {/* : <TokenMetadataDisplay data={tokenData} />} */}
-    </div>
+    </SWRProvider>
   );
 }
 

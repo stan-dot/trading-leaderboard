@@ -11,7 +11,7 @@ export function LeaderboardTableForMarket(
   { rows, tableTitle }: TableOnContractProps,
 ) {
   // console.log("rows:", rows);
-  if (rows.length === 0) {
+  if (!rows || rows.length === 0) {
     return <h2>No table here - {tableTitle}</h2>;
   }
   const sum = rows.reduce((prev, curr) => prev + curr.value, 0);

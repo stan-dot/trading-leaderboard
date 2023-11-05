@@ -3,6 +3,7 @@ export type Market = {
   name: string;
   duneUrl?: string;
 };
+
 export const getMarketLink = (m: Market) =>
   `https://goerli.etherscan.io/address/${m.contractAddress}`;
 

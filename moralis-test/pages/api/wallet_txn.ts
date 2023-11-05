@@ -1,16 +1,7 @@
-import Moralis from "moralis";
 import { EvmChain } from "@moralisweb3/common-evm-utils";
-import { WalletTx } from "../../types/WalletTx";
+import Moralis from "moralis";
 import { NextApiRequest, NextApiResponse } from "next";
-import axios from "axios";
-
-// await Moralis.start({
-//   apiKey: key,
-//   // ...and any other configuration
-// });
-
-// const key = process.env.MORALIS_API_KEY;
-// const defaultAddress = "0xd8da6bf26964af9d7eed9e03e53415d37aa96045";
+import { WalletTx } from "../../types/WalletTx";
 
 type ResponseData = {
   error?: string;

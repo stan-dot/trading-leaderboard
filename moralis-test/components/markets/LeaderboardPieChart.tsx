@@ -22,22 +22,26 @@ type LeaderboardChartProps = {
 export default function LeaderboardPieChart({ rows }: LeaderboardChartProps) {
   return (
     <div>
-      <h2>Pie chart for this contract:</h2>
-      <PieChart width={730} height={250}>
-        <Pie
-          data={rows}
-          dataKey="weth_value"
-          nameKey="address"
-          cx="50%"
-          cy="50%"
-          innerRadius={60}
-          outerRadius={80}
-          fill="#ff00ee"
-        />
-        <Tooltip
-          content={LeaderboardChartTooltip}
-        />
-      </PieChart>
+      <h3>Top traders on this market</h3>
+      {!rows || rows.length === 0
+        ? <p>no rows</p>
+        : (
+          <PieChart width={730} height={250}>
+            <Pie
+              data={rows}
+              dataKey="value"
+              nameKey="address"
+              cx="50%"
+              cy="50%"
+              innerRadius={60}
+              outerRadius={80}
+              fill="#ff00ee"
+            />
+            <Tooltip
+              content={LeaderboardChartTooltip}
+            />
+          </PieChart>
+        )}
     </div>
   );
 }

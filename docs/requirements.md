@@ -12,6 +12,7 @@ types of pairs that people are trading in general - to see what markets they are
 - [ ] persist the dune top trader values actually. 
   - [ ] add a refresh button 
 
+
 ## technology choices
 - nextjs for the backend
 - Ramda js for data transformation - looks that not needed

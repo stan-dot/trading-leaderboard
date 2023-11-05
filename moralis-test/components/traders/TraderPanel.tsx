@@ -1,6 +1,4 @@
 "use client";
-import React from "react";
-import { LeaderboardTableForMarket } from "../markets/LeaderboardTableForMarket";
 import TraderPairsChart from "./TraderPairsChart";
 
 type TraderPanelProps = {
