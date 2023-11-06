@@ -7,6 +7,7 @@ import { useEvmTokenMetadata } from "@moralisweb3/next";
 import Link from "next/link";
 import React from "react";
 import { markets } from "../../utils/markets";
+import { evmFetcherConfig } from "../../config/evmFetcherConfig";
 
 function MarketsList() {
   const r: GetTokenMetadataRequest = {
@@ -15,7 +16,7 @@ function MarketsList() {
   };
 
   console.log("static addresses: ", r);
-  const metadata = useEvmTokenMetadata(r);
+  const metadata = useEvmTokenMetadata(r, evmFetcherConfig);
   return (
     <div>
       MarketsList

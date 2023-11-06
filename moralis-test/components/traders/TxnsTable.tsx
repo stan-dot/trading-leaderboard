@@ -1,5 +1,10 @@
-import { EvmChain, EvmTransaction } from "@moralisweb3/common-evm-utils";
+import {
+  EvmChain,
+  EvmTransaction,
+  GetWalletTransactionsRequest,
+} from "@moralisweb3/common-evm-utils";
 import { useEvmWalletTransactions } from "@moralisweb3/next";
+import { evmFetcherConfig } from "../../config/evmFetcherConfig";
 type TxnsTableProps = {
   walletId: string;
 };
@@ -10,13 +15,12 @@ function TxnsTable({ walletId }: TxnsTableProps) {
   // const { data: walletData, error: walletError, isLoading: walletIsLoading } =
   //   useSWR(`/api/wallet_txn/${walletId}`, fetcher);
 
-  const chain = EvmChain.GOERLI;
-
-  const { data } = useEvmWalletTransactions({
+  const request: GetWalletTransactionsRequest = {
     address: walletId,
-    chain,
+    chain: EvmChain.GOERLI,
     limit: 10,
-  });
+  };
+  const { data } = useEvmWalletTransactions(request, evmFetcherConfig);
 
   console.log("data: ", data);
   // console.log(walletData, walletIsLoading, walletError);
