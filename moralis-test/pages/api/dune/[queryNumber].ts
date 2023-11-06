@@ -44,6 +44,6 @@ export async function fetchDataFromDuneApi(
     return response.data;
   } catch (error) {
     console.error("Error fetching data from Dune API:", error);
-    throw error;
+    return 'erorr fetching from dune api'
   }
 }

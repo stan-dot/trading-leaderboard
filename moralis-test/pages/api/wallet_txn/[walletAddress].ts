@@ -27,7 +27,7 @@ export default function handler(
 
 // todo change the limit for production
 const txnsLimit = 10;
-export const getWalletTxns = async (address: string): Promise<WalletTx[]> => {
+export const getWalletTxns = async (address: string): Promise<EvmTransaction[]> => {
   const chain = EvmChain.GOERLI;
 
   const response = await Moralis.EvmApi.transaction.getWalletTransactions({
@@ -38,7 +38,7 @@ export const getWalletTxns = async (address: string): Promise<WalletTx[]> => {
 
   const gotJson = response.toJSON();
   console.log("response json:", gotJson);
-  const r: WalletTx[] = gotJson.result as WalletTx[];
+  const r: EvmTransaction[] = gotJson.result ;
   console.log(r);
   return r;
 };

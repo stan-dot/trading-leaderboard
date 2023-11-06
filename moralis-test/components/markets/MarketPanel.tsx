@@ -7,6 +7,8 @@ import { Market } from "../../utils/markets";
 import { Row } from "../../types/DuneResponse";
 import TokenMetadataDisplay from "./TokenMetadataCard";
 import { SWRProvider } from "../../wrappers/swr-provider";
+import { useEvmTokenMetadata } from "@moralisweb3/next";
+import { Erc20Token, EvmChain } from "@moralisweb3/common-evm-utils";
 
 export const mockRows: Row[] = [
   { address: "0xfd3f35e6dedb01d57200e0217a7893d6dc794208", value: 6736 },
@@ -41,13 +43,19 @@ type MarketPanelProps = {
 };
 
 function MarketPanel({ id, market }: MarketPanelProps) {
-  const { data: tokenData, error: tokenError, isLoading: tokenIsLoading } =
-    useSWR(`/api/cache_metadata/${id}`, fetcher);
+  // const { data: tokenData, error: tokenError, isLoading: tokenIsLoading } =
+  //   useSWR(`/api/cache_metadata/${id}`, fetcher);
+  const { data } = useEvmTokenMetadata({
+    addresses: [id],
+    chain: EvmChain.GOERLI,
+  });
+  // const token: Erc20Token = data[0].token;
+
   const { data: duneData, error: duneError, isLoading: duneIsLoading } = useSWR(
     `/api/dune/${market.duneQueryNumber}`,
     fetcher,
   );
-  console.log("token data :", tokenData);
+  // console.log("token data :", tokenData);
   console.log("dune data :", duneData);
 
   return (
@@ -69,10 +77,13 @@ function MarketPanel({ id, market }: MarketPanelProps) {
             tableTitle={`Biggest traders for ${market.name}`}
           />
         </Suspense>
-        {tokenIsLoading && tokenData
+        {
+          /* {tokenIsLoading && tokenData
           ? <p>token is loading</p>
-          : <p>data loaded</p>}
-        {/* : <TokenMetadataDisplay data={tokenData} />} */}
+          : <p>data loaded</p>} */
+        }
+        {data && Array.isArray(data) && data.length !== 0 &&
+          <TokenMetadataDisplay token={data[0].token} address={id} />}
       </div>
     </SWRProvider>
   );
