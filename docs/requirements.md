@@ -16,6 +16,7 @@ types of pairs that people are trading in general - to see what markets they are
 - [ ] change from evm moralis hooks into API routes proper
   - [ ] persist the token metadata with mongodb - ok actually only 6 markets are out there
 
+- [ ] using the immutable feature https://swr.vercel.app/docs/revalidation#disable-automatic-revalidations
 
 ## technology choices
 - nextjs for the backend

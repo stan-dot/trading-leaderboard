@@ -1,16 +1,15 @@
 "use client";
-import React, { Suspense } from "react";
 import useSWR from "swr";
+import {
+  DuneRow
+} from "../../pages/api/dune/[queryNumber]";
+import { Row } from "../../types/DuneResponse";
+import { Market } from "../../utils/markets";
+import { SWRProvider } from "../../wrappers/swr-provider";
 import LeaderboardPieChart from "./LeaderboardPieChart";
 import { LeaderboardTableForMarket } from "./LeaderboardTableForMarket";
-import { Market } from "../../utils/markets";
-import { Row } from "../../types/DuneResponse";
-import TokenMetadataDisplay from "./TokenMetadataCard";
-import { SWRProvider } from "../../wrappers/swr-provider";
-import { useEvmTokenMetadata } from "@moralisweb3/next";
-import { Erc20Token, EvmChain } from "@moralisweb3/common-evm-utils";
 
-export const mockRows: Row[] = [
+const mockRows: Row[] = [
   { address: "0xfd3f35e6dedb01d57200e0217a7893d6dc794208", value: 6736 },
   {
     address: "0x72bebd20d1c8f5f5875d616dd53885288076fbc3",
@@ -35,7 +34,16 @@ export const mockRows: Row[] = [
   { address: "0x60520172cf716257371da9520cccfa9aa3b27333", value: 1400 },
 ];
 
-const fetcher = (...args) => fetch(...args).then((res) => res.json());
+const fetcher = (...args) => {
+  // console.log(args);
+  return fetch(...args).then((res) => res.json());
+  // fetch(...args).then(async (res) => {
+  // console.log("res: ", res);
+  // const m = await res.json();
+  // console.log("res json: ", m);
+  //   return await res.json();
+  // });
+};
 
 type MarketPanelProps = {
   id: string;
@@ -45,18 +53,47 @@ type MarketPanelProps = {
 function MarketPanel({ id, market }: MarketPanelProps) {
   // const { data: tokenData, error: tokenError, isLoading: tokenIsLoading } =
   //   useSWR(`/api/cache_metadata/${id}`, fetcher);
-  const { data } = useEvmTokenMetadata({
-    addresses: [id],
-    chain: EvmChain.GOERLI,
-  });
+  // const { data } = useEvmTokenMetadata({
+  //   addresses: [id],
+  //   chain: EvmChain.GOERLI,
+  // });
   // const token: Erc20Token = data[0].token;
 
-  const { data: duneData, error: duneError, isLoading: duneIsLoading } = useSWR(
+  const {
+    data: duneData,
+    error: duneError,
+    isLoading: duneIsLoading,
+    isValidating: duneisValidating,
+  } = useSWR<
+    { data: DuneRow[] },
+    // DuneMarketResponse,
+    any,
+    any
+  >(
     `/api/dune/${market.duneQueryNumber}`,
     fetcher,
+    {
+      revalidateIfStale: false,
+      revalidateOnFocus: false,
+      revalidateOnReconnect: false,
+    },
   );
+
   // console.log("token data :", tokenData);
   console.log("dune data :", duneData);
+  console.log("dune loading :", duneIsLoading);
+
+  if (duneisValidating) {
+    return <p>isValidating</p>;
+  }
+
+  if (duneIsLoading || !duneData) {
+    return <p>loading</p>;
+  }
+
+  if (duneError) {
+    return <p>error loading</p>;
+  }
 
   return (
     <SWRProvider>
@@ -68,22 +105,36 @@ function MarketPanel({ id, market }: MarketPanelProps) {
             {market.name}
           </div>
         </div>
-        {/* <LeaderboardPieChart rows={mockRows} /> */}
-        <Suspense fallback={<p>loading</p>}>
-          <LeaderboardPieChart rows={duneData} />
-          {/* <LeaderboardTableForMarket rows={mockRows} tableTitle={`Biggest traders for ${market.name}`} /> */}
+        {
+          /* <>
+          <LeaderboardPieChart rows={duneData.result.rows} />
           <LeaderboardTableForMarket
-            rows={duneData}
+            rows={duneData.result.rows}
             tableTitle={`Biggest traders for ${market.name}`}
           />
-        </Suspense>
+        </> */
+        }
+        {/* {duneData && duneData.result && duneData.result.rows && duneData.result.rows.length !== 0 */}
+        {!duneIsLoading && duneData
+          ? (
+            <>
+              <LeaderboardPieChart rows={duneData.data} />
+              <LeaderboardTableForMarket
+                rows={duneData.data}
+                tableTitle={`Biggest traders for ${market.name}`}
+              />
+            </>
+          )
+          : <p>loading data</p>}
         {
           /* {tokenIsLoading && tokenData
           ? <p>token is loading</p>
           : <p>data loaded</p>} */
         }
-        {data && Array.isArray(data) && data.length !== 0 &&
-          <TokenMetadataDisplay token={data[0].token} address={id} />}
+        {
+          /* {data && Array.isArray(data) && data.length !== 0 &&
+          <TokenMetadataDisplay token={data[0].token} address={id} />} */
+        }
       </div>
     </SWRProvider>
   );
