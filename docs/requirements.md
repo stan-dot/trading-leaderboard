@@ -5,7 +5,7 @@
   - [x] fix the too much use of API, infinite re-renders - [x] using the immutable feature https://swr.vercel.app/docs/revalidation#disable-automatic-revalidations
   - [x] also had to disable that for the EVM hooks https://www.npmjs.com/package/@moralisweb3/next#3-disable-auto-data-fetching
   - [ ] get the trader data
-  - [ ] display the trader data as another pie chart - what pairs do compose given trader's portfolio.
+  - [x] display the trader data as another pie chart - what pairs do compose given trader's portfolio.
   - [ ] deploy stuff
 
 ## caching stage

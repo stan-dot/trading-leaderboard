@@ -1,13 +1,14 @@
 "use client";
 import useSWR from "swr";
-import {
-  DuneRow
-} from "../../pages/api/dune/[queryNumber]";
+import { DuneRow } from "../../pages/api/dune/[queryNumber]";
 import { Row } from "../../types/DuneResponse";
 import { Market } from "../../utils/markets";
 import { SWRProvider } from "../../wrappers/swr-provider";
 import LeaderboardPieChart from "./LeaderboardPieChart";
 import { LeaderboardTableForMarket } from "./LeaderboardTableForMarket";
+import { Erc20Token, EvmChain } from "@moralisweb3/common-evm-utils";
+import { useEvmTokenMetadata } from "@moralisweb3/next";
+import { evmFetcherConfig } from "../../config/evmFetcherConfig";
 
 const mockRows: Row[] = [
   { address: "0xfd3f35e6dedb01d57200e0217a7893d6dc794208", value: 6736 },
@@ -51,12 +52,18 @@ type MarketPanelProps = {
 };
 
 function MarketPanel({ id, market }: MarketPanelProps) {
+  const chain = EvmChain.GOERLI;
   // const { data: tokenData, error: tokenError, isLoading: tokenIsLoading } =
   //   useSWR(`/api/cache_metadata/${id}`, fetcher);
-  // const { data } = useEvmTokenMetadata({
-  //   addresses: [id],
-  //   chain: EvmChain.GOERLI,
-  // });
+  const {
+    data: tokenMetadata,
+    isFetching: metadataIsFetching,
+    error: metadataError,
+  } = useEvmTokenMetadata({
+    addresses: [id],
+    chain,
+  }, evmFetcherConfig);
+  console.log("data for market: ", tokenMetadata);
   // const token: Erc20Token = data[0].token;
 
   const {
