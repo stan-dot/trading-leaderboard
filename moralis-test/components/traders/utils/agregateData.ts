@@ -1,8 +1,11 @@
 import { EvmTransactionData } from "@moralisweb3/common-evm-utils";
 import { BigNumber } from "bignumber.js";
-import { AggregatedDataArray, AggregatedTransactionData } from "../TraderPanel";
+import { AggregatedTransactionData } from "../TraderPanel";
 
-export function agregateData(data: EvmTransactionData[]): AggregatedDataArray {
+export function agregateData(data: EvmTransactionData[]): AggregatedTransactionData[] {
+  if (!data || data.length === 0) {
+    return [];
+  }
   // Assuming `data` is an array of transaction objects
   const aggregatedData: AggregatedTransactionData[] = data.reduce(
     (acc, transaction) => {

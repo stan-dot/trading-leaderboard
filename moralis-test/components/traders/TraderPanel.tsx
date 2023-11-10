@@ -20,8 +20,6 @@ export type AggregatedTransactionData = {
   transactions: EvmTransactionData[]; // Array of original transaction data
 };
 
-export type AggregatedDataArray = AggregatedTransactionData[];
-
 type TraderPanelProps = {
   id: string;
 };
@@ -37,12 +35,13 @@ function TraderPanel({ id }: TraderPanelProps) {
     limit: 10,
   };
 
-  const { data, isFetching, error } = useEvmWalletTransactions(
+  const { data, isFetching, error, total, cursor } = useEvmWalletTransactions(
     request,
     evmFetcherConfig,
   );
 
   console.log("data in txns table: ", data);
+  console.log("total and cursor", total, "cursos: ", cursor);
   if (error) {
     return (
       <div>
@@ -66,6 +65,7 @@ function TraderPanel({ id }: TraderPanelProps) {
       TraderPanel
       <h2>wallet address: {id}</h2>
       {/* <TraderPairsChart aggregatedData={a} /> */}
+      {a.length === 0 && <p>No rows here</p>}
       <SimplePieChart data={a} />
       {/* <TxnsTable data={a} /> */}
       <TransactionsTable data={a} />
