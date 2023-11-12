@@ -1,11 +1,10 @@
-import { EvmChain } from "@moralisweb3/common-evm-utils";
+import { EvmChain, EvmTransaction } from "@moralisweb3/common-evm-utils";
 import Moralis from "moralis";
 import { NextApiRequest, NextApiResponse } from "next";
-import { EvmTransaction } from "../../../types/WalletTx";
 
 type ResponseData = {
   error?: string;
-  txns?: WalletTx[];
+  txns?: EvmTransaction[];
 };
 
 export default function handler(

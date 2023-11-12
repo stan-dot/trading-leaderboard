@@ -1,16 +1,21 @@
 "use client";
-import {
-  EvmChain,
-  EvmTransactionData,
-  GetWalletTransactionsRequest,
-} from "@moralisweb3/common-evm-utils";
-import { useEvmWalletTransactions } from "@moralisweb3/next";
-import { evmFetcherConfig } from "../../config/evmFetcherConfig";
 
+import { EvmTransactionData } from "@moralisweb3/common-evm-utils";
 import { BigNumber } from "bignumber.js";
+import useSWR from "swr";
+import { DuneRowTrader } from "../../pages/api/dune_wallet_history/[walletAddress]";
 import TransactionsTable from "./NewTable";
-import { SimplePieChart } from "./SimpleChart";
-import { agregateData } from "./utils/agregateData";
+
+const fetcher = (...args) => {
+  // console.log(args);
+  return fetch(...args).then((res) => res.json());
+  // fetch(...args).then(async (res) => {
+  // console.log("res: ", res);
+  // const m = await res.json();
+  // console.log("res json: ", m);
+  //   return await res.json();
+  // });
+};
 
 export type AggregatedTransactionData = {
   address: string;
@@ -25,23 +30,36 @@ type TraderPanelProps = {
 };
 
 function TraderPanel({ id }: TraderPanelProps) {
-  const chain = EvmChain.GOERLI;
-  // const { data: walletData, error: walletError, isLoading: walletIsLoading } =
-  //   useSWR(`/api/wallet_txn/${walletId}`, fetcher);
+  // const chain = EvmChain.GOERLI;
 
-  const request: GetWalletTransactionsRequest = {
-    address: id,
-    chain,
-    limit: 10,
-  };
+  // hard coded id example 1
+  const hardCodedTraderId = "0xe865bd3ed38dae3fa6829e2574d61676d55468ef";
+  if (id !== hardCodedTraderId) {
+    return <p>not ready to check this trader&apos;s panel</p>;
+  }
 
-  const { data, isFetching, error, total, cursor } = useEvmWalletTransactions(
-    request,
-    evmFetcherConfig,
+  const { data: dataWrapper, error, isLoading } = useSWR<
+    { data: DuneRowTrader[] },
+    any,
+    any
+  >(
+    `/api/dune_wallet_history/${hardCodedTraderId}`,
+    fetcher,
   );
 
-  console.log("data in txns table: ", data);
-  console.log("total and cursor", total, "cursos: ", cursor);
+  // const request: GetWalletTransactionsRequest = {
+  //   address: id,
+  //   chain,
+  //   limit: 10,
+  // };
+
+  // const { data, isFetching, error, total, cursor } = useEvmWalletTransactions(
+  //   request,
+  //   evmFetcherConfig,
+  // );
+
+  // console.log("data in txns table: ", data);
+  // console.log("total and cursor", total, "cursos: ", cursor);
   if (error) {
     return (
       <div>
@@ -50,7 +68,7 @@ function TraderPanel({ id }: TraderPanelProps) {
     );
   }
 
-  if (isFetching) {
+  if (isLoading) {
     return (
       <div>
         <h3>fetching data for this trader...</h3>
@@ -58,17 +76,17 @@ function TraderPanel({ id }: TraderPanelProps) {
     );
   }
   // todo aggregate data here and then only forward
-  const a = agregateData(data);
+  // const a = agregateData(data);
 
+  console.log("data: ", dataWrapper);
   return (
     <div>
       TraderPanel
       <h2>wallet address: {id}</h2>
-      {/* <TraderPairsChart aggregatedData={a} /> */}
-      {a.length === 0 && <p>No rows here</p>}
-      <SimplePieChart data={a} />
-      {/* <TxnsTable data={a} /> */}
-      <TransactionsTable data={a} />
+      {/* {a.length === 0 && <p>No rows here</p>} */}
+      {/* <SimplePieChart data={a} /> */}
+      <TransactionsTable data={dataWrapper.data} />
+      {/* <p>data length: {data}</p> */}
     </div>
   );
 }
