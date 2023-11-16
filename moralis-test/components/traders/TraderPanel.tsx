@@ -33,8 +33,12 @@ function TraderPanel({ id }: TraderPanelProps) {
   // const chain = EvmChain.GOERLI;
 
   // hard coded id example 1
-  const hardCodedTraderId = "0xe865bd3ed38dae3fa6829e2574d61676d55468ef";
-  if (id !== hardCodedTraderId) {
+  const hardCodedTraderIds: string[] = [
+    "0xe865bd3ed38dae3fa6829e2574d61676d55468ef",
+    "0x10bc7c3aae1f2f792097b96dd8b37030d9e66088",
+  ];
+
+  if (!hardCodedTraderIds.find((i) => i === id)) {
     return <p>not ready to check this trader&apos;s panel</p>;
   }
 
@@ -43,7 +47,7 @@ function TraderPanel({ id }: TraderPanelProps) {
     any,
     any
   >(
-    `/api/dune_wallet_history/${hardCodedTraderId}`,
+    `/api/dune_wallet_history/${hardCodedTraderIds}`,
     fetcher,
   );
 
@@ -83,10 +87,9 @@ function TraderPanel({ id }: TraderPanelProps) {
     <div>
       TraderPanel
       <h2>wallet address: {id}</h2>
-      {/* {a.length === 0 && <p>No rows here</p>} */}
+      {dataWrapper.data.length === 0 && <p>No rows here</p>}
       {/* <SimplePieChart data={a} /> */}
       <TransactionsTable data={dataWrapper.data} />
-      {/* <p>data length: {data}</p> */}
     </div>
   );
 }

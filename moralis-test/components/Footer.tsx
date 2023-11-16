@@ -2,7 +2,9 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div>
+    <div className="flex w-full bg-black border-t border-zinc-800">
+
+    <footer className="mx-auto max-w-[1700px] w-full overflow-hidden ">
       <p>
         made by
         <a
@@ -11,6 +13,7 @@ export default function Footer() {
           {" "}standot
         </a>
       </p>
+    </footer>
     </div>
   );
 }

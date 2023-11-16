@@ -8,20 +8,14 @@
   - [x] display the trader data as another pie chart - what pairs do compose given trader's portfolio.
   - [ ] deploy stuff
 
+- [x] hard code some traders
+- [x] try setting up storybook
+- [ ] make the UI nice
+- [ ] starting from the big layout
+- [ ] focus on the components according to the best practices
+
 ## caching stage
 - [x] change from evm moralis hooks into API routes proper
 - [ ] persist the token metadata with mongodb - ok actually only 6 markets are out there
 - [ ] persist the dune top trader values in monogdb
   - [ ] add a refresh button 
-
-
-## exploring different APIs than Moralis
-https://github.com/paradigmxyz/cryo
-this they say is early stage.
-and the data isn't live
-
-
-for covalent not sure how to get transactions for the real time stuff
-https://www.covalenthq.com/docs/api/balances/get-token-balances-for-address/
-or this 
-https://www.pokt.network/

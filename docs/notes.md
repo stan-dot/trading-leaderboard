@@ -98,3 +98,14 @@ topic0 = transfer event
 
 full command with rate limits - not that successfull
 cryo logs --topic0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef --to-address 0xeA2b4e7F02b859305093f9F4778a19D66CA176d5  --contract  0xea2b4e7f02b859305093f9f4778a19d66ca176d5 --network-name 5  --rpc https://eth-goerli.g.alchemy.com/v2/O34BZtmZhQIURrZ8bxXYM7j4UVuZF_fU -l 330
+
+## exploring different APIs than Moralis
+https://github.com/paradigmxyz/cryo
+this they say is early stage.
+and the data isn't live
+
+
+for covalent not sure how to get transactions for the real time stuff
+https://www.covalenthq.com/docs/api/balances/get-token-balances-for-address/
+or this 
+https://www.pokt.network/
