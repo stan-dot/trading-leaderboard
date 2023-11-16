@@ -13,9 +13,20 @@
 - [ ] make the UI nice
 - [ ] starting from the big layout
 - [ ] focus on the components according to the best practices
+- [ ] possibly migrate to Next14 for better tailwind support
 
 ## caching stage
 - [x] change from evm moralis hooks into API routes proper
 - [ ] persist the token metadata with mongodb - ok actually only 6 markets are out there
 - [ ] persist the dune top trader values in monogdb
   - [ ] add a refresh button 
+
+## questions
+- [ ] definitely not integrated with the current app
+- [ ] Hilliam mentioned that have frontend devs, but should I do this?
+- [ ] how much view inside?
+- [ ] how many hard-coded wallets or some specific ones?
+- [ ] storybook good for this or not?
+- [ ] some issues with metadata
+- [ ] what deliverables exactly?
+- [ ] 

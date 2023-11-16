@@ -1,19 +1,37 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+
+import { useEffect, useState } from "react";
+
+const useScrollPosition = () => {
+  const [scrollAtTop, setScrollAtTop] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Set state based on scroll position
+      setScrollAtTop(window.scrollY === 0);
+    };
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return scrollAtTop;
+};
 
 function Navbar() {
-  const navbar = document.getElementById("navbar");
-  if (window.scrollY === 0) {
-    navbar.classList.remove("bg-opacity-50");
-    navbar.classList.add("bg-white");
-  } else {
-    navbar.classList.remove("bg-white");
-    navbar.classList.add("bg-opacity-50");
-  }
+  const scrollAtTop = useScrollPosition();
 
   return (
-    <div className="inset-x-0 top-0 z-50 flex h-14 items-center justify-between gap-12 border-b border-zinc-800  px-4 transition sm:px-6 backdrop-blur  bg-black">
-      <nav className="hidden md:block">
+    <div
+      className={`inset-x-0 top-0 z-50 flex h-14 items-center justify-between gap-12 border-b border-zinc-800  px-4 transition sm:px-6 backdrop-blur  bg-black
+        ${scrollAtTop ? "bg-white" : "bg-white bg-opacity-50"}
+  `}
+    >
+      <nav id="navbar" className="hidden md:block">
         <ul role="list" className="flex items-center gap-5">
           <li className="p-2 m-5">
             <Link

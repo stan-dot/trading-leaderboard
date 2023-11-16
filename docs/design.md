@@ -23,12 +23,9 @@ public facing website
 
 - [ ] text display
   - [ ] font-thin in some p tags
-  - [ ] 
 
 - [ ] text input
   - [ ] focus:ring-white
-  - [ ] 
-
 
 ## marquee start tags
 <div class="marquee-container flex items-center" style="--pause-on-hover: running; --pause-on-click: running; --width: 100%; --transform: none;"><div class="marquee" style="--play: running; --direction: normal; --duration: 6.398928833007813s; --delay: 0s; --iteration-count: infinite; --min-width: 100%;"><div class="initial-child-container"><div class="child" style="--transform: none;"><svg class="h-[55px] lg:h-[90px] my-auto mt-2 text-white group-hover/button:text-black" viewBox="0 0 1808 111" fill="none" xmlns="http://www.w3.org/2000/svg">
